@@ -1,0 +1,226 @@
+{
+  "run_id": "20261105-213811",
+  "started_at": "2026-11-05T13:38:11.579Z",
+  "finished_at": "2026-11-05T13:45:51.953Z",
+  "base_url": "https://city-treasurer-staging.aiqe.pro",
+  "browsers": [
+    "chrome",
+    "firefox"
+  ],
+  "story": "UCTP",
+  "counts": {
+    "passed": 20,
+    "flaky": 0,
+    "failed": 4,
+    "blocked": 0,
+    "not_tested": 0
+  },
+  "results": [
+    {
+      "id": "A6",
+      "title": "A6 · AC-5 · reject a one-character full name",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A7",
+      "title": "A7 · AC-5 · reject a 101-character full name",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A6",
+      "title": "A6 · AC-5 · accept a full name of 100 letters (the upper limit)",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A7",
+      "title": "A7 · AC-5 · accept the full name \"Ñoño O'Brien-Cruz Jr.\" (Ñ and . - ')",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A6",
+      "title": "A6 · AC-2 · list taxpayers when zero taxpayers created",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "A7",
+      "title": "A7 · AC-2 · list does not contain taxpayer from failed POST with missing name",
+      "browser": "api",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-2 · show created name, mobile and supplied email in My taxpayers",
+      "browser": "chrome",
+      "status": "failed",
+      "error": "Test timeout of 30000ms exceeded.\nError: locator.click: Target page, context or browser has been closed\nCall log:\n  - waiting for getByRole('link', { name: 'My taxpayers' })\n\n\n  35 | async function openMyTaxpayers(page: any) {\n  36 |   await page.getByRole('link', { name: 'My data' }).click();",
+      "screenshot": "artifacts/chrome/integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-chrome-retry3/attachments/screenshot-f18e281808262b7bde0507959375f9d5953e8c99.png"
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-1, AC-2 · create \"Ana Dela Cruz\" with the API, see it on the screen",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-2 · POST taxpayer via API and check My data › My taxpayers",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W5",
+      "title": "W5 · AC-3 · trim surrounding spaces from the creation message",
+      "browser": "chrome",
+      "status": "failed",
+      "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('Ana mmlk Dela Cruz created — mobile 09886112363.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:",
+      "screenshot": "artifacts/chrome/web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-chrome-retry3/attachments/screenshot-2d2b15f8fc15952211561d6bfdd0673ccd088358.png"
+    },
+    {
+      "id": "W6",
+      "title": "W6 · AC-3 · reject a whitespace-only name",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W5",
+      "title": "W5 · AC-4 · refuse the same mobile twice on the screen (\"Ben Dela Cruz\" after \"Ana Dela Cruz\")",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W6",
+      "title": "W6 · AC-5 · refuse the full name \"A\" (1 letter) on the screen",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W5",
+      "title": "W5 · AC-2 · create taxpayer via web form then navigate to My data › My taxpayers",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W6",
+      "title": "W6 · AC-2 · view My data › My taxpayers when zero taxpayers created",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-2 · show created name, mobile and supplied email in My taxpayers",
+      "browser": "firefox",
+      "status": "failed",
+      "error": "Test timeout of 30000ms exceeded.\nError: locator.click: Test ended.\nBrowser logs:\n\n<launching> C:\\Users\\ttesoro\\AppData\\Local\\ms-playwright\\firefox-1543\\firefox\\firefox.exe -no-remote -wait-for-browser -foreground -profile C:\\Users\\ttesoro\\AppData\\Local\\Temp\\playwright_firefoxdev_profile-sjw5si -juggler-pipe -silent\n<launched> pid=24572\n[pid=24572][err] JavaScript warning: resource://services-settings/Utils.sys.mjs, line 125: unreachable code after return statement\n[pid=24572][out]",
+      "screenshot": "artifacts/firefox/integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-firefox-retry3/attachments/screenshot-02b8eb67e8f3cff151481efb23b8767b45eac610.png"
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-1, AC-2 · create \"Ana Dela Cruz\" with the API, see it on the screen",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-2 · POST taxpayer via API and check My data › My taxpayers",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W5",
+      "title": "W5 · AC-3 · trim surrounding spaces from the creation message",
+      "browser": "firefox",
+      "status": "failed",
+      "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('Ana jjpg Dela Cruz created — mobile 09886328608.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:",
+      "screenshot": "artifacts/firefox/web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-firefox-retry3/attachments/screenshot-ac90f6739e889bc50d7e489acf9c7925004ade0d.png"
+    },
+    {
+      "id": "W6",
+      "title": "W6 · AC-3 · reject a whitespace-only name",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W5",
+      "title": "W5 · AC-4 · refuse the same mobile twice on the screen (\"Ben Dela Cruz\" after \"Ana Dela Cruz\")",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W6",
+      "title": "W6 · AC-5 · refuse the full name \"A\" (1 letter) on the screen",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W5",
+      "title": "W5 · AC-2 · create taxpayer via web form then navigate to My data › My taxpayers",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W6",
+      "title": "W6 · AC-2 · view My data › My taxpayers when zero taxpayers created",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "not_tested": [],
+  "report": "UCTP - 2026-11-05 213811.html",
+  "messages": [],
+  "pushed": false,
+  "push_message": "",
+  "folder": "test-runs/2026-11-05/UCTP - 2026-11-05 213811",
+  "pages_url": "https://tedbryantesoro.github.io/uctp-tests/2026-11-05/UCTP%20-%202026-11-05%20213811/UCTP%20-%202026-11-05%20213811.html",
+  "only": [
+    "A7",
+    "I1",
+    "W5",
+    "A6",
+    "W6"
+  ]
+}

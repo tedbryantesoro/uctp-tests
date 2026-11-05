@@ -1,0 +1,834 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\ttesoro\\qe360\\uctp-tests\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/web",
+      "tests/integration",
+      "--project=firefox",
+      "--workers=1",
+      "--retries=3",
+      "--pass-with-no-tests",
+      "--grep",
+      "(?:^|\\s)(A7|I1|W5|A6|W6) ·",
+      "--headed"
+    ],
+    "configFile": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\playwright.config.ts",
+    "rootDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 213811/artifacts/firefox",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 213811/artifacts/firefox",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/(web|integration)[\\\\/].*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 213811/artifacts/firefox",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/(web|integration)[\\\\/].*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\raw\\firefox.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "integration\\trn-01-integration.spec.ts",
+      "file": "integration/trn-01-integration.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "I1 · AC-2 · show created name, mobile and supplied email in My taxpayers",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30057,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "[pid=41784][out]         ERROR: error in channel \"content::11/12/4\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-8 findExecutionContext@chrome://juggler/content/content/Runtime.js",
+                        "column": 13,
+                        "line": 310
+                      },
+                      "message": "Error: locator.click: Test ended.\nBrowser logs:\n\n<launching> C:\\Users\\ttesoro\\AppData\\Local\\ms-playwright\\firefox-1543\\firefox\\firefox.exe -no-remote -wait-for-browser -foreground -profile C:\\Users\\ttesoro\\AppData\\Local\\Temp\\playwright_firefoxdev_profile-v2Hvf6 -juggler-pipe -silent\n<launched> pid=41784\n[pid=41784][err] JavaScript warning: resource://services-settings/Utils.sys.mjs, line 125: unreachable code after return statement\n[pid=41784][out] \n[pid=41784][out] Juggler listening to the pipe\n[pid=41784][out] console.error: \"Warning: unrecognized command line flag\" \"-foreground\"\n[pid=41784][err] JavaScript error: chrome://juggler/content/Helper.js, line 82: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]\n[pid=41784][err] [ERROR shell_windows::limited_access_features] Error generating feature token: NS_ERROR_FAILURE\n[pid=41784][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=41784][err] JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data\n[pid=41784][out] console.warn: services.settings: #fetchAttachment: Forcing fallbackToDump to false due to Utils.LOAD_DUMPS being false\n[pid=41784][out] console.error: (new NotFoundError(\"Could not find fa0fc42c-d91d-fca7-34eb-806ff46062dc in cache or dump\", \"resource://services-settings/Attachments.sys.mjs\", 48))\n[pid=41784][out] console.warn: \"Unable to find the attachment for\" \"fa0fc42c-d91d-fca7-34eb-806ff46062dc\"\n[pid=41784][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=41784][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=41784][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=41784][out] \n[pid=41784][out]         ERROR: error in channel \"content::11/12/4\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-8 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=41784][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=41784][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=41784][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=41784][out] \n[pid=41784][out]       \n[pid=41784][out]         ERROR: error in channel \"content::11/12/6\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-25 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=41784][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=41784][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=41784][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=41784][out] \n[pid=41784][err] JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.\n[pid=41784][err] JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.\n[pid=41784][out]       \n[pid=41784][out]         ERROR: error in channel \"content::11/12/7\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-34 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=41784][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=41784][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=41784][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=41784][out] \n[pid=41784][out]       console.error: services.settings: \n[pid=41784][out]   Message: EmptyDatabaseError: \"main/nimbus-desktop-experiments\" has not been synced yet\n[pid=41784][out]   Stack:\n[pid=41784][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n[pid=41784][out] list@resource://services-settings/Database.sys.mjs:96:13\n[pid=41784][out] \n[pid=41784][out] console.error: services.settings: \n[pid=41784][out]   Message: EmptyDatabaseError: \"main/nimbus-desktop-experiments\" has not been synced yet\n[pid=41784][out]   Stack:\n[pid=41784][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n[pid=41784][out] list@resource://services-settings/Database.sys.mjs:96:13\n[pid=41784][out] \n[pid=41784] <gracefully close start>\n[pid=41784][err] JavaScript error: chrome://juggler/content/Helper.js, line 82: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]\n[pid=41784][out] console.error: \"Could not download new icon\" (new ServerInfoError(\"Server response is invalid [Exception... \\\"<no message>\\\"  nsresult: \\\"0x8046001e (<unknown>)\\\"  location: \\\"JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126\\\"  data: no]\", \"resource://services-settings/Attachments.sys.mjs\", 40))\n[pid=41784][out] 1793886171837\taddons.xpi\tERROR\tSystem addon update list error Error: Failed downloading XML, status: 0, channelStatus: 2147500036, errorCode: 2, reason: error\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'My taxpayers' })\u001b[22m\n\n    at [pid=41784][out]         ERROR: error in channel \"content::11/12/4\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-8 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=41784][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=41784][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=41784][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=41784][out]         ERROR: error in channel \"content::11/12/6\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-25 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=41784][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=41784][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=41784][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=41784][out]         ERROR: error in channel \"content::11/12/7\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-34 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=41784][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=41784][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=41784][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=41784][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=41784][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=41784][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n    at [pid=41784][out] list@resource://services-settings/Database.sys.mjs:96:13\n    at [pid=41784][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n    at [pid=41784][out] list@resource://services-settings/Database.sys.mjs:96:13\n    at openMyTaxpayers (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:37:58)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:49:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:42:19.910Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-firefox\\attachments\\screenshot-f6c7198dc580933d26ec169b9d64ea0b8a0e2e2e.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-firefox\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30047,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "[pid=34704][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs",
+                        "column": 5,
+                        "line": 19
+                      },
+                      "message": "Error: locator.click: Test ended.\nBrowser logs:\n\n<launching> C:\\Users\\ttesoro\\AppData\\Local\\ms-playwright\\firefox-1543\\firefox\\firefox.exe -no-remote -wait-for-browser -foreground -profile C:\\Users\\ttesoro\\AppData\\Local\\Temp\\playwright_firefoxdev_profile-vZcC86 -juggler-pipe -silent\n<launched> pid=34704\n[pid=34704][err] JavaScript warning: resource://services-settings/Utils.sys.mjs, line 125: unreachable code after return statement\n[pid=34704][out] \n[pid=34704][out] Juggler listening to the pipe\n[pid=34704][out] console.error: \"Warning: unrecognized command line flag\" \"-foreground\"\n[pid=34704][err] JavaScript error: chrome://juggler/content/Helper.js, line 82: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]\n[pid=34704][out] console.warn: services.settings: #fetchAttachment: Forcing fallbackToDump to false due to Utils.LOAD_DUMPS being false\n[pid=34704][out] console.error: (new NotFoundError(\"Could not find fa0fc42c-d91d-fca7-34eb-806ff46062dc in cache or dump\", \"resource://services-settings/Attachments.sys.mjs\", 48))\n[pid=34704][out] console.warn: \"Unable to find the attachment for\" \"fa0fc42c-d91d-fca7-34eb-806ff46062dc\"\n[pid=34704][err] [ERROR shell_windows::limited_access_features] Error generating feature token: NS_ERROR_FAILURE\n[pid=34704][err] JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data\n[pid=34704][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=34704][out] console.error: services.settings: \n[pid=34704][out]   Message: EmptyDatabaseError: \"main/nimbus-desktop-experiments\" has not been synced yet\n[pid=34704][out]   Stack:\n[pid=34704][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n[pid=34704][out] list@resource://services-settings/Database.sys.mjs:96:13\n[pid=34704][out] \n[pid=34704][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=34704][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=34704][out] \n[pid=34704][out]         ERROR: error in channel \"content::11/12/4\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-8 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=34704][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=34704][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=34704][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=34704][out] \n[pid=34704][out]       \n[pid=34704][out]         ERROR: error in channel \"content::11/12/6\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-25 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=34704][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=34704][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=34704][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=34704][out] \n[pid=34704][err] JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.\n[pid=34704][out]       \n[pid=34704][out]         ERROR: error in channel \"content::11/12/7\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-34 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=34704][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=34704][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=34704][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=34704][out] \n[pid=34704][out]       console.error: services.settings: \n[pid=34704][out]   Message: EmptyDatabaseError: \"main/nimbus-desktop-experiments\" has not been synced yet\n[pid=34704][out]   Stack:\n[pid=34704][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n[pid=34704][out] list@resource://services-settings/Database.sys.mjs:96:13\n[pid=34704][out] \n[pid=34704][out] console.error: \"Could not download new icon\" (new ServerInfoError(\"Server response is invalid SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data\", \"resource://services-settings/Attachments.sys.mjs\", 40))\n[pid=34704] <gracefully close start>\n[pid=34704][err] JavaScript error: chrome://juggler/content/Helper.js, line 82: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]\n[pid=34704][out] 1793886203926\taddons.xpi\tERROR\tSystem addon update list error Error: Failed downloading XML, status: 0, channelStatus: 2152398868, errorCode: 2, reason: error\n[pid=34704] <process did exit: exitCode=0, signal=null>\n[pid=34704] starting temporary directories cleanup\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'My taxpayers' })\u001b[22m\n\n    at [pid=34704][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n    at [pid=34704][out] list@resource://services-settings/Database.sys.mjs:96:13\n    at [pid=34704][out]         ERROR: error in channel \"content::11/12/4\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-8 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=34704][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=34704][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=34704][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=34704][out]         ERROR: error in channel \"content::11/12/6\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-25 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=34704][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=34704][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=34704][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=34704][out]         ERROR: error in channel \"content::11/12/7\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-34 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=34704][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=34704][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=34704][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=34704][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=34704][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=34704][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n    at [pid=34704][out] list@resource://services-settings/Database.sys.mjs:96:13\n    at openMyTaxpayers (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:37:58)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:49:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-05T13:42:52.682Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-firefox-retry1\\attachments\\screenshot-0fde975bed2cca9b3105106220fd0b32f831c503.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-firefox-retry1\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30051,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "[pid=46800][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs",
+                        "column": 5,
+                        "line": 19
+                      },
+                      "message": "Error: locator.click: Test ended.\nBrowser logs:\n\n<launching> C:\\Users\\ttesoro\\AppData\\Local\\ms-playwright\\firefox-1543\\firefox\\firefox.exe -no-remote -wait-for-browser -foreground -profile C:\\Users\\ttesoro\\AppData\\Local\\Temp\\playwright_firefoxdev_profile-zkUyTh -juggler-pipe -silent\n<launched> pid=46800\n[pid=46800][err] JavaScript warning: resource://services-settings/Utils.sys.mjs, line 125: unreachable code after return statement\n[pid=46800][out] \n[pid=46800][out] Juggler listening to the pipe\n[pid=46800][out] console.error: \"Warning: unrecognized command line flag\" \"-foreground\"\n[pid=46800][err] JavaScript error: chrome://juggler/content/Helper.js, line 82: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]\n[pid=46800][err] [ERROR shell_windows::limited_access_features] Error generating feature token: NS_ERROR_FAILURE\n[pid=46800][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=46800][out] console.warn: services.settings: #fetchAttachment: Forcing fallbackToDump to false due to Utils.LOAD_DUMPS being false\n[pid=46800][out] console.error: (new NotFoundError(\"Could not find fa0fc42c-d91d-fca7-34eb-806ff46062dc in cache or dump\", \"resource://services-settings/Attachments.sys.mjs\", 48))\n[pid=46800][out] console.warn: \"Unable to find the attachment for\" \"fa0fc42c-d91d-fca7-34eb-806ff46062dc\"\n[pid=46800][err] JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data\n[pid=46800][out] console.error: services.settings: \n[pid=46800][out]   Message: EmptyDatabaseError: \"main/nimbus-desktop-experiments\" has not been synced yet\n[pid=46800][out]   Stack:\n[pid=46800][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n[pid=46800][out] list@resource://services-settings/Database.sys.mjs:96:13\n[pid=46800][out] \n[pid=46800][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=46800][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=46800][out] \n[pid=46800][out]         ERROR: error in channel \"content::11/12/4\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-8 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=46800][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=46800][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=46800][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=46800][out] \n[pid=46800][out]       \n[pid=46800][out]         ERROR: error in channel \"content::11/12/6\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-25 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=46800][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=46800][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=46800][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=46800][out] \n[pid=46800][err] JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.\n[pid=46800][err] JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.\n[pid=46800][out]       \n[pid=46800][out]         ERROR: error in channel \"content::11/12/7\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-34 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=46800][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=46800][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=46800][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=46800][out] \n[pid=46800] <gracefully close start>\n[pid=46800][out]       console.error: services.settings: \n[pid=46800][out]   Message: EmptyDatabaseError: \"main/nimbus-desktop-experiments\" has not been synced yet\n[pid=46800][out]   Stack:\n[pid=46800][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n[pid=46800][out] list@resource://services-settings/Database.sys.mjs:96:13\n[pid=46800][out] \n[pid=46800][out] console.error: \"Could not download new icon\" (new ServerInfoError(\"Server response is invalid SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data\", \"resource://services-settings/Attachments.sys.mjs\", 40))\n[pid=46800][err] JavaScript error: chrome://juggler/content/Helper.js, line 82: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'My taxpayers' })\u001b[22m\n\n    at [pid=46800][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n    at [pid=46800][out] list@resource://services-settings/Database.sys.mjs:96:13\n    at [pid=46800][out]         ERROR: error in channel \"content::11/12/4\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-8 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=46800][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=46800][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=46800][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=46800][out]         ERROR: error in channel \"content::11/12/6\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-25 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=46800][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=46800][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=46800][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=46800][out]         ERROR: error in channel \"content::11/12/7\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-34 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=46800][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=46800][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=46800][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=46800][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=46800][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=46800][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n    at [pid=46800][out] list@resource://services-settings/Database.sys.mjs:96:13\n    at openMyTaxpayers (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:37:58)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:49:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-11-05T13:43:24.931Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-firefox-retry2\\attachments\\screenshot-a11f1519c88f9f5352bfdfff5ee35f08f3fad8f8.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-firefox-retry2\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30048,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "[pid=24572][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs",
+                        "column": 5,
+                        "line": 19
+                      },
+                      "message": "Error: locator.click: Test ended.\nBrowser logs:\n\n<launching> C:\\Users\\ttesoro\\AppData\\Local\\ms-playwright\\firefox-1543\\firefox\\firefox.exe -no-remote -wait-for-browser -foreground -profile C:\\Users\\ttesoro\\AppData\\Local\\Temp\\playwright_firefoxdev_profile-sjw5si -juggler-pipe -silent\n<launched> pid=24572\n[pid=24572][err] JavaScript warning: resource://services-settings/Utils.sys.mjs, line 125: unreachable code after return statement\n[pid=24572][out] \n[pid=24572][out] Juggler listening to the pipe\n[pid=24572][out] console.error: \"Warning: unrecognized command line flag\" \"-foreground\"\n[pid=24572][err] JavaScript error: chrome://juggler/content/Helper.js, line 82: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]\n[pid=24572][out] console.warn: services.settings: #fetchAttachment: Forcing fallbackToDump to false due to Utils.LOAD_DUMPS being false\n[pid=24572][out] console.error: (new NotFoundError(\"Could not find fa0fc42c-d91d-fca7-34eb-806ff46062dc in cache or dump\", \"resource://services-settings/Attachments.sys.mjs\", 48))\n[pid=24572][out] console.warn: \"Unable to find the attachment for\" \"fa0fc42c-d91d-fca7-34eb-806ff46062dc\"\n[pid=24572][err] [ERROR shell_windows::limited_access_features] Error generating feature token: NS_ERROR_FAILURE\n[pid=24572][err] JavaScript error: , line 0: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data\n[pid=24572][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=24572][out] console.error: services.settings: \n[pid=24572][out]   Message: EmptyDatabaseError: \"main/nimbus-desktop-experiments\" has not been synced yet\n[pid=24572][out]   Stack:\n[pid=24572][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n[pid=24572][out] list@resource://services-settings/Database.sys.mjs:96:13\n[pid=24572][out] \n[pid=24572][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=24572][err] [ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: \"Unspecified error\" }\n[pid=24572][out] \n[pid=24572][out]         ERROR: error in channel \"content::11/12/4\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-8 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=24572][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=24572][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=24572][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=24572][out] \n[pid=24572][out]       \n[pid=24572][out]         ERROR: error in channel \"content::11/12/6\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-25 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=24572][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=24572][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=24572][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=24572][out] \n[pid=24572][err] JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.\n[pid=24572][out]       \n[pid=24572][out]         ERROR: error in channel \"content::11/12/7\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-34 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n[pid=24572][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n[pid=24572][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n[pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=24572][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n[pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n[pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n[pid=24572][out] \n[pid=24572][out]       console.error: services.settings: \n[pid=24572][out]   Message: EmptyDatabaseError: \"main/nimbus-desktop-experiments\" has not been synced yet\n[pid=24572][out]   Stack:\n[pid=24572][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n[pid=24572][out] list@resource://services-settings/Database.sys.mjs:96:13\n[pid=24572][out] \n[pid=24572] <gracefully close start>\n[pid=24572][out] console.error: \"Could not download new icon\" (new ServerInfoError(\"Server response is invalid SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data\", \"resource://services-settings/Attachments.sys.mjs\", 40))\n[pid=24572][err] JavaScript error: chrome://juggler/content/Helper.js, line 82: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIWebProgress.removeProgressListener]\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'My taxpayers' })\u001b[22m\n\n    at [pid=24572][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n    at [pid=24572][out] list@resource://services-settings/Database.sys.mjs:96:13\n    at [pid=24572][out]         ERROR: error in channel \"content::11/12/4\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-8 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=24572][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=24572][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=24572][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=24572][out]         ERROR: error in channel \"content::11/12/6\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-25 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=24572][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=24572][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=24572][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=24572][out]         ERROR: error in channel \"content::11/12/7\": exception while running method \"disposeObject\" in namespace \"page\": Failed to find execution context with id = id-34 findExecutionContext@chrome://juggler/content/content/Runtime.js:310:13\n    at [pid=24572][out] disposeObject@chrome://juggler/content/content/Runtime.js:123:35\n    at [pid=24572][out] _onMessageInternal@chrome://juggler/content/SimpleChannel.js:237:37\n    at [pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=24572][out]  _onMessageInternal@chrome://juggler/content/SimpleChannel.js:208:24\n    at [pid=24572][out] _onMessage@chrome://juggler/content/SimpleChannel.js:194:12\n    at [pid=24572][out] bindToActor/actor.receiveMessage@chrome://juggler/content/SimpleChannel.js:39:44\n    at [pid=24572][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5\n    at [pid=24572][out] list@resource://services-settings/Database.sys.mjs:96:13\n    at openMyTaxpayers (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:37:58)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:49:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2026-11-05T13:43:57.183Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-firefox-retry3\\attachments\\screenshot-02b8eb67e8f3cff151481efb23b8767b45eac610.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-firefox-retry3\\error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6e599ebb247d45bbcdf3-1077e5d833800cf57007",
+          "file": "integration/trn-01-integration.spec.ts",
+          "line": 40,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "integration\\trn-01.spec.ts",
+      "file": "integration/trn-01.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TRN-01 Register a taxpayer (integration: API and screen)",
+          "file": "integration/trn-01.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "I1 · AC-1, AC-2 · create \"Ana Dela Cruz\" with the API, see it on the screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10400,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:44:29.455Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "06816b618c52f28575de-36920e69cb090019e7a9",
+              "file": "integration/trn-01.spec.ts",
+              "line": 20,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "integration\\trn01_register_taxpayer.spec.ts",
+      "file": "integration/trn01_register_taxpayer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TRN-01 Integration tests",
+          "file": "integration/trn01_register_taxpayer.spec.ts",
+          "line": 28,
+          "column": 6,
+          "specs": [
+            {
+              "title": "I1 · AC-2 · POST taxpayer via API and check My data › My taxpayers",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6905,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:44:40.757Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "127c4c311a6827f3a121-4c951baefc7269196e30",
+              "file": "integration/trn01_register_taxpayer.spec.ts",
+              "line": 30,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "web\\trn-01-web.spec.ts",
+      "file": "web/trn-01-web.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W5 · AC-3 · trim surrounding spaces from the creation message",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6990,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana ncku Dela Cruz created — mobile 09886289343.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana ncku Dela Cruz created — mobile 09886289343.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana ncku Dela Cruz created — mobile 09886289343.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana ncku Dela Cruz created — mobile 09886289343.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana ncku Dela Cruz created — mobile 09886289343.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana ncku Dela Cruz created — mobile 09886289343.', { exact: true })\u001b[22m\n\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 8,
+                      "line": 100
+                    },
+                    "snippet": "   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 8,
+                        "line": 100
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana ncku Dela Cruz created — mobile 09886289343.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana ncku Dela Cruz created — mobile 09886289343.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana ncku Dela Cruz created — mobile 09886289343.', { exact: true })\u001b[22m\n\n\n   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:44:47.688Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-firefox\\attachments\\screenshot-df1c502a736dcde078927fa4755e9834a84dbf54.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-firefox\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 8,
+                    "line": 100
+                  }
+                },
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10907,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana yznz Dela Cruz created — mobile 09886302501.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana yznz Dela Cruz created — mobile 09886302501.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana yznz Dela Cruz created — mobile 09886302501.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana yznz Dela Cruz created — mobile 09886302501.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana yznz Dela Cruz created — mobile 09886302501.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana yznz Dela Cruz created — mobile 09886302501.', { exact: true })\u001b[22m\n\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 8,
+                      "line": 100
+                    },
+                    "snippet": "   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 8,
+                        "line": 100
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana yznz Dela Cruz created — mobile 09886302501.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana yznz Dela Cruz created — mobile 09886302501.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana yznz Dela Cruz created — mobile 09886302501.', { exact: true })\u001b[22m\n\n\n   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-05T13:44:55.997Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-firefox-retry1\\attachments\\screenshot-4cd8df6578b9f57a5102e2714932fb5e84f30e28.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-firefox-retry1\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 8,
+                    "line": 100
+                  }
+                },
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10305,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana thqu Dela Cruz created — mobile 09886315179.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana thqu Dela Cruz created — mobile 09886315179.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana thqu Dela Cruz created — mobile 09886315179.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana thqu Dela Cruz created — mobile 09886315179.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana thqu Dela Cruz created — mobile 09886315179.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana thqu Dela Cruz created — mobile 09886315179.', { exact: true })\u001b[22m\n\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 8,
+                      "line": 100
+                    },
+                    "snippet": "   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 8,
+                        "line": 100
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana thqu Dela Cruz created — mobile 09886315179.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana thqu Dela Cruz created — mobile 09886315179.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana thqu Dela Cruz created — mobile 09886315179.', { exact: true })\u001b[22m\n\n\n   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-11-05T13:45:09.276Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-firefox-retry2\\attachments\\screenshot-d91b216b2b6a4eeb462a7da567907899f30560cf.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-firefox-retry2\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 8,
+                    "line": 100
+                  }
+                },
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11047,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana jjpg Dela Cruz created — mobile 09886328608.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana jjpg Dela Cruz created — mobile 09886328608.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana jjpg Dela Cruz created — mobile 09886328608.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana jjpg Dela Cruz created — mobile 09886328608.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana jjpg Dela Cruz created — mobile 09886328608.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana jjpg Dela Cruz created — mobile 09886328608.', { exact: true })\u001b[22m\n\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 8,
+                      "line": 100
+                    },
+                    "snippet": "   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 8,
+                        "line": 100
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana jjpg Dela Cruz created — mobile 09886328608.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana jjpg Dela Cruz created — mobile 09886328608.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana jjpg Dela Cruz created — mobile 09886328608.', { exact: true })\u001b[22m\n\n\n   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2026-11-05T13:45:21.959Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-firefox-retry3\\attachments\\screenshot-ac90f6739e889bc50d7e489acf9c7925004ade0d.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\firefox\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-firefox-retry3\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 8,
+                    "line": 100
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-3c598956f16b9d7c9feb",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 88,
+          "column": 5
+        },
+        {
+          "title": "W6 · AC-3 · reject a whitespace-only name",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5459,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:45:35.361Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-b6ffef53727c14068634",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 103,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "web\\trn-01.spec.ts",
+      "file": "web/trn-01.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TRN-01 Register a taxpayer (web)",
+          "file": "web/trn-01.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "W5 · AC-4 · refuse the same mobile twice on the screen (\"Ben Dela Cruz\" after \"Ana Dela Cruz\")",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2531,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:45:41.778Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-589a331938f3512a3382",
+              "file": "web/trn-01.spec.ts",
+              "line": 56,
+              "column": 7
+            },
+            {
+              "title": "W6 · AC-5 · refuse the full name \"A\" (1 letter) on the screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2223,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:45:44.327Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-b92f7976c30908011acf",
+              "file": "web/trn-01.spec.ts",
+              "line": 70,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "web\\trn01_register_taxpayer.spec.ts",
+      "file": "web/trn01_register_taxpayer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TRN-01 Web tests",
+          "file": "web/trn01_register_taxpayer.spec.ts",
+          "line": 27,
+          "column": 6,
+          "specs": [
+            {
+              "title": "W5 · AC-2 · create taxpayer via web form then navigate to My data › My taxpayers",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2383,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:45:46.596Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6dfe539e57b961a2cb9b-6f86c4cb30abea11facf",
+              "file": "web/trn01_register_taxpayer.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "W6 · AC-2 · view My data › My taxpayers when zero taxpayers created",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1775,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:45:48.994Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6dfe539e57b961a2cb9b-b31ca5884cc5899f6f53",
+              "file": "web/trn01_register_taxpayer.spec.ts",
+              "line": 78,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T13:42:19.110Z",
+    "duration": 212807.215,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

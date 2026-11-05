@@ -1,0 +1,211 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: integration\trn-01-integration.spec.ts >> I1 · AC-2 · show created name, mobile and supplied email in My taxpayers
+- Location: tests\integration\trn-01-integration.spec.ts:40:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f5e1]:
+  - note [ref=f5e2]: TRAINING — made-up data only
+  - navigation "Main" [ref=f5e3]:
+    - link "UCTP" [ref=f5e4] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f5e5]:
+      - link "Home" [ref=f5e6] [cursor=pointer]:
+        - /url: /
+      - link "Training setup" [ref=f5e7] [cursor=pointer]:
+        - /url: /training
+      - link "Teller POS" [ref=f5e8] [cursor=pointer]:
+        - /url: /pos
+      - link "Citizen portal" [ref=f5e9] [cursor=pointer]:
+        - /url: /portal
+      - link "Simulator" [ref=f5e10] [cursor=pointer]:
+        - /url: /simulator
+      - link "My data" [ref=f5e11] [cursor=pointer]:
+        - /url: /my-data
+      - link "API docs" [ref=f5e12] [cursor=pointer]:
+        - /url: /docs
+    - generic [ref=f5e14]:
+      - text: "You are:"
+      - strong [ref=f5e15]: ted-1234
+      - link "Change" [ref=f5e16] [cursor=pointer]:
+        - /url: "#"
+  - main [ref=f5e17]:
+    - generic [ref=f5e18]:
+      - heading "My data" [level=1] [ref=f5e19]
+      - paragraph [ref=f5e20]: Everything created under your name. Another name — even the same name typed again — sees nothing here.
+      - generic [ref=f5e21]:
+        - heading "My taxpayers" [level=2] [ref=f5e22]
+        - table [ref=f5e23]:
+          - rowgroup [ref=f5e24]:
+            - row [ref=f5e25]:
+              - columnheader "Name" [ref=f5e26]
+              - columnheader "Mobile" [ref=f5e27]
+              - columnheader "Email" [ref=f5e28]
+          - rowgroup [ref=f5e29]:
+            - row [ref=f5e30]:
+              - cell "Ana lrha Dela Cruz" [ref=f5e31]
+              - cell "09886177337" [ref=f5e32]
+              - cell "ana@example.com" [ref=f5e33]
+            - row [ref=f5e34]:
+              - cell "Ana evgz Dela Cruz" [ref=f5e35]
+              - cell "09886146548" [ref=f5e36]
+              - cell "ana@example.com" [ref=f5e37]
+            - row [ref=f5e38]:
+              - cell "Ana omzx Dela Cruz" [ref=f5e39]
+              - cell "09886134630" [ref=f5e40]
+              - cell "—" [ref=f5e41]
+            - row [ref=f5e42]:
+              - cell "Ana Dela Cruz" [ref=f5e43]
+              - cell "09861255491" [ref=f5e44]
+              - cell "—" [ref=f5e45]
+            - row [ref=f5e46]:
+              - cell "Ana mmlk Dela Cruz" [ref=f5e47]
+              - cell "09886112363" [ref=f5e48]
+              - cell "—" [ref=f5e49]
+            - row [ref=f5e50]:
+              - cell "Ana zrdn Dela Cruz" [ref=f5e51]
+              - cell "09886103109" [ref=f5e52]
+              - cell "—" [ref=f5e53]
+            - row [ref=f5e54]:
+              - cell "Ana qtoi Dela Cruz" [ref=f5e55]
+              - cell "09886093387" [ref=f5e56]
+              - cell "—" [ref=f5e57]
+            - row [ref=f5e58]:
+              - cell "Ana wqxa Dela Cruz" [ref=f5e59]
+              - cell "09886084357" [ref=f5e60]
+              - cell "—" [ref=f5e61]
+            - row [ref=f5e62]:
+              - cell "Ana utkt Dela Cruz" [ref=f5e63]
+              - cell "09886073945" [ref=f5e64]
+              - cell "—" [ref=f5e65]
+            - row [ref=f5e66]:
+              - cell "Ana Dela Cruz" [ref=f5e67]
+              - cell "09860659361" [ref=f5e68]
+              - cell "rosa@example.com" [ref=f5e69]
+            - row [ref=f5e70]:
+              - cell "Ana fpxi Dela Cruz" [ref=f5e71]
+              - cell "09886032746" [ref=f5e72]
+              - cell "ana@example.com" [ref=f5e73]
+            - row [ref=f5e74]:
+              - cell "Ana kxyc Dela Cruz" [ref=f5e75]
+              - cell "09886001495" [ref=f5e76]
+              - cell "ana@example.com" [ref=f5e77]
+            - row [ref=f5e78]:
+              - cell "Ana zmkv Dela Cruz" [ref=f5e79]
+              - cell "09885969214" [ref=f5e80]
+              - cell "ana@example.com" [ref=f5e81]
+            - row [ref=f5e82]:
+              - cell "Ana abxw Dela Cruz" [ref=f5e83]
+              - cell "09885939454" [ref=f5e84]
+              - cell "ana@example.com" [ref=f5e85]
+            - row [ref=f5e86]:
+              - cell "Ñoño O'Brien-Cruz Jr." [ref=f5e87]
+              - cell "09859184743" [ref=f5e88]
+              - cell "—" [ref=f5e89]
+            - row [ref=f5e90]:
+              - cell "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" [ref=f5e91]
+              - cell "09859132622" [ref=f5e92]
+              - cell "—" [ref=f5e93]
+            - row [ref=f5e94]:
+              - cell "Ana Dela Cruz" [ref=f5e95]
+              - cell "09859080561" [ref=f5e96]
+              - cell "—" [ref=f5e97]
+            - row [ref=f5e98]:
+              - cell "Ana yrut Dela Cruz" [ref=f5e99]
+              - cell "09884275471" [ref=f5e100]
+              - cell "—" [ref=f5e101]
+            - row [ref=f5e102]:
+              - cell "Ana eiye Dela Cruz" [ref=f5e103]
+              - cell "09884274360" [ref=f5e104]
+              - cell "—" [ref=f5e105]
+            - row [ref=f5e106]:
+              - cell "Ana bfkp Dela Cruz" [ref=f5e107]
+              - cell "09884273287" [ref=f5e108]
+              - cell "—" [ref=f5e109]
+            - row [ref=f5e110]:
+              - cell "Ana meij Dela Cruz" [ref=f5e111]
+              - cell "09884272256" [ref=f5e112]
+              - cell "—" [ref=f5e113]
+            - row [ref=f5e114]:
+              - cell "Ana lkhh Dela Cruz" [ref=f5e115]
+              - cell "09884269945" [ref=f5e116]
+              - cell "ana@example.com" [ref=f5e117]
+            - row [ref=f5e118]:
+              - cell "Ana brjm Dela Cruz" [ref=f5e119]
+              - cell "09884269262" [ref=f5e120]
+              - cell "—" [ref=f5e121]
+            - row [ref=f5e122]:
+              - cell "Abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" [ref=f5e123]
+              - cell "09884267230" [ref=f5e124]
+              - cell "—" [ref=f5e125]
+            - row [ref=f5e126]:
+              - cell "Ab" [ref=f5e127]
+              - cell "09884266553" [ref=f5e128]
+              - cell "—" [ref=f5e129]
+            - row [ref=f5e130]:
+              - cell "Ana imrt Dela Cruz" [ref=f5e131]
+              - cell "09884265504" [ref=f5e132]
+              - cell "—" [ref=f5e133]
+            - row [ref=f5e134]:
+              - cell "Rosa Web" [ref=f5e135]
+              - cell "09842431343" [ref=f5e136]
+              - cell "—" [ref=f5e137]
+            - row [ref=f5e138]:
+              - cell "Ana Dela Cruz" [ref=f5e139]
+              - cell "09842384452" [ref=f5e140]
+              - cell "—" [ref=f5e141]
+            - row [ref=f5e142]:
+              - cell "Ana Dela Cruz" [ref=f5e143]
+              - cell "09842352061" [ref=f5e144]
+              - cell "—" [ref=f5e145]
+            - row [ref=f5e146]:
+              - cell "Ana vudi Dela Cruz" [ref=f5e147]
+              - cell "09884206187" [ref=f5e148]
+              - cell "—" [ref=f5e149]
+            - row [ref=f5e150]:
+              - cell "Ana trgc Dela Cruz" [ref=f5e151]
+              - cell "09884158912" [ref=f5e152]
+              - cell "—" [ref=f5e153]
+            - row [ref=f5e154]:
+              - cell "Ana kzsl Dela Cruz" [ref=f5e155]
+              - cell "09884143867" [ref=f5e156]
+              - cell "—" [ref=f5e157]
+            - row [ref=f5e158]:
+              - cell "Rosa Web" [ref=f5e159]
+              - cell "09841229593" [ref=f5e160]
+              - cell "—" [ref=f5e161]
+            - row [ref=f5e162]:
+              - cell "Ana Dela Cruz" [ref=f5e163]
+              - cell "09841184732" [ref=f5e164]
+              - cell "—" [ref=f5e165]
+            - row [ref=f5e166]:
+              - cell "Ana Dela Cruz" [ref=f5e167]
+              - cell "09841153461" [ref=f5e168]
+              - cell "—" [ref=f5e169]
+      - generic [ref=f5e170]:
+        - heading "My bills" [level=2] [ref=f5e171]
+        - paragraph [ref=f5e172]: None yet.
+      - generic [ref=f5e173]:
+        - heading "My tellers" [level=2] [ref=f5e174]
+        - paragraph [ref=f5e175]: None yet.
+      - generic [ref=f5e176]:
+        - heading "My approver" [level=2] [ref=f5e177]
+        - paragraph [ref=f5e178]: None yet — create one in Training setup (step 5).
+      - generic [ref=f5e179]:
+        - heading "My receipts" [level=2] [ref=f5e180]
+        - paragraph [ref=f5e181]: None yet — collect a payment at the POS.
+```

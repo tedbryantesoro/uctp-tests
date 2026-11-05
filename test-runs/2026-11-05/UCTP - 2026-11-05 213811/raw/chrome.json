@@ -1,0 +1,834 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\ttesoro\\qe360\\uctp-tests\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/web",
+      "tests/integration",
+      "--project=chrome",
+      "--workers=1",
+      "--retries=3",
+      "--pass-with-no-tests",
+      "--grep",
+      "(?:^|\\s)(A7|I1|W5|A6|W6) ·",
+      "--headed"
+    ],
+    "configFile": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\playwright.config.ts",
+    "rootDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 213811/artifacts/chrome",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 213811/artifacts/chrome",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/(web|integration)[\\\\/].*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 213811/artifacts/chrome",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/(web|integration)[\\\\/].*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\raw\\chrome.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "integration\\trn-01-integration.spec.ts",
+      "file": "integration/trn-01-integration.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "I1 · AC-2 · show created name, mobile and supplied email in My taxpayers",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30089,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts",
+                        "column": 58,
+                        "line": 37
+                      },
+                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'My taxpayers' })\u001b[22m\n\n\n  35 | async function openMyTaxpayers(page: any) {\n  36 |   await page.getByRole('link', { name: 'My data' }).click();\n> 37 |   await page.getByRole('link', { name: 'My taxpayers' }).click();\n     |                                                          ^\n  38 | }\n  39 |\n  40 | test('I1 · AC-2 · show created name, mobile and supplied email in My taxpayers',\n    at openMyTaxpayers (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:37:58)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:49:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:38:56.552Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-chrome\\attachments\\screenshot-6fe45728b35f6e160c5997e34f8737f9bb625af2.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-chrome\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30099,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts",
+                        "column": 58,
+                        "line": 37
+                      },
+                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'My taxpayers' })\u001b[22m\n\n\n  35 | async function openMyTaxpayers(page: any) {\n  36 |   await page.getByRole('link', { name: 'My data' }).click();\n> 37 |   await page.getByRole('link', { name: 'My taxpayers' }).click();\n     |                                                          ^\n  38 | }\n  39 |\n  40 | test('I1 · AC-2 · show created name, mobile and supplied email in My taxpayers',\n    at openMyTaxpayers (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:37:58)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:49:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-05T13:39:28.002Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-chrome-retry1\\attachments\\screenshot-99f0591b39b39cb2a16ef95c1d1c1c9092e7ad01.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-chrome-retry1\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30097,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts",
+                        "column": 58,
+                        "line": 37
+                      },
+                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'My taxpayers' })\u001b[22m\n\n\n  35 | async function openMyTaxpayers(page: any) {\n  36 |   await page.getByRole('link', { name: 'My data' }).click();\n> 37 |   await page.getByRole('link', { name: 'My taxpayers' }).click();\n     |                                                          ^\n  38 | }\n  39 |\n  40 | test('I1 · AC-2 · show created name, mobile and supplied email in My taxpayers',\n    at openMyTaxpayers (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:37:58)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:49:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-11-05T13:39:59.339Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-chrome-retry2\\attachments\\screenshot-79d0eca3af70ae95537dbf10765d859902e003f4.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-chrome-retry2\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30100,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts",
+                        "column": 58,
+                        "line": 37
+                      },
+                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'My taxpayers' })\u001b[22m\n\n\n  35 | async function openMyTaxpayers(page: any) {\n  36 |   await page.getByRole('link', { name: 'My data' }).click();\n> 37 |   await page.getByRole('link', { name: 'My taxpayers' }).click();\n     |                                                          ^\n  38 | }\n  39 |\n  40 | test('I1 · AC-2 · show created name, mobile and supplied email in My taxpayers',\n    at openMyTaxpayers (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:37:58)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\integration\\trn-01-integration.spec.ts:49:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2026-11-05T13:40:30.688Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-chrome-retry3\\attachments\\screenshot-f18e281808262b7bde0507959375f9d5953e8c99.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\integration-trn-01-integra-d91a9-plied-email-in-My-taxpayers-chrome-retry3\\error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6e599ebb247d45bbcdf3-2dfc8bab02f4ce55f2a2",
+          "file": "integration/trn-01-integration.spec.ts",
+          "line": 40,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "integration\\trn-01.spec.ts",
+      "file": "integration/trn-01.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TRN-01 Register a taxpayer (integration: API and screen)",
+          "file": "integration/trn-01.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "I1 · AC-1, AC-2 · create \"Ana Dela Cruz\" with the API, see it on the screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10062,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:41:02.049Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "06816b618c52f28575de-1d2cfff2f693e0c99c11",
+              "file": "integration/trn-01.spec.ts",
+              "line": 20,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "integration\\trn01_register_taxpayer.spec.ts",
+      "file": "integration/trn01_register_taxpayer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TRN-01 Integration tests",
+          "file": "integration/trn01_register_taxpayer.spec.ts",
+          "line": 28,
+          "column": 6,
+          "specs": [
+            {
+              "title": "I1 · AC-2 · POST taxpayer via API and check My data › My taxpayers",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8613,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:41:12.610Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "127c4c311a6827f3a121-e818aa4fc8be6c22c1bc",
+              "file": "integration/trn01_register_taxpayer.spec.ts",
+              "line": 30,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "web\\trn-01-web.spec.ts",
+      "file": "web/trn-01-web.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W5 · AC-3 · trim surrounding spaces from the creation message",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8318,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana wqxa Dela Cruz created — mobile 09886084357.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana wqxa Dela Cruz created — mobile 09886084357.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana wqxa Dela Cruz created — mobile 09886084357.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana wqxa Dela Cruz created — mobile 09886084357.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana wqxa Dela Cruz created — mobile 09886084357.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana wqxa Dela Cruz created — mobile 09886084357.', { exact: true })\u001b[22m\n\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 8,
+                      "line": 100
+                    },
+                    "snippet": "   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 8,
+                        "line": 100
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana wqxa Dela Cruz created — mobile 09886084357.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana wqxa Dela Cruz created — mobile 09886084357.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana wqxa Dela Cruz created — mobile 09886084357.', { exact: true })\u001b[22m\n\n\n   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:41:21.250Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-chrome\\attachments\\screenshot-04f50edb3e9d68ec771bbd5485aaea8309bc873e.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 8,
+                    "line": 100
+                  }
+                },
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7825,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana qtoi Dela Cruz created — mobile 09886093387.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana qtoi Dela Cruz created — mobile 09886093387.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana qtoi Dela Cruz created — mobile 09886093387.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana qtoi Dela Cruz created — mobile 09886093387.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana qtoi Dela Cruz created — mobile 09886093387.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana qtoi Dela Cruz created — mobile 09886093387.', { exact: true })\u001b[22m\n\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 8,
+                      "line": 100
+                    },
+                    "snippet": "   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 8,
+                        "line": 100
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana qtoi Dela Cruz created — mobile 09886093387.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana qtoi Dela Cruz created — mobile 09886093387.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana qtoi Dela Cruz created — mobile 09886093387.', { exact: true })\u001b[22m\n\n\n   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-05T13:41:30.302Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-chrome-retry1\\attachments\\screenshot-0cb148c6408bb522c4538880c6039c24b7033eb2.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-chrome-retry1\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 8,
+                    "line": 100
+                  }
+                },
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8544,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana zrdn Dela Cruz created — mobile 09886103109.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana zrdn Dela Cruz created — mobile 09886103109.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana zrdn Dela Cruz created — mobile 09886103109.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana zrdn Dela Cruz created — mobile 09886103109.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana zrdn Dela Cruz created — mobile 09886103109.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana zrdn Dela Cruz created — mobile 09886103109.', { exact: true })\u001b[22m\n\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 8,
+                      "line": 100
+                    },
+                    "snippet": "   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 8,
+                        "line": 100
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana zrdn Dela Cruz created — mobile 09886103109.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana zrdn Dela Cruz created — mobile 09886103109.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana zrdn Dela Cruz created — mobile 09886103109.', { exact: true })\u001b[22m\n\n\n   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-11-05T13:41:39.305Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-chrome-retry2\\attachments\\screenshot-be787f469aa159f07cf130f6887138114d5e8c75.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-chrome-retry2\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 8,
+                    "line": 100
+                  }
+                },
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8091,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana mmlk Dela Cruz created — mobile 09886112363.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana mmlk Dela Cruz created — mobile 09886112363.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana mmlk Dela Cruz created — mobile 09886112363.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana mmlk Dela Cruz created — mobile 09886112363.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana mmlk Dela Cruz created — mobile 09886112363.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana mmlk Dela Cruz created — mobile 09886112363.', { exact: true })\u001b[22m\n\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 8,
+                      "line": 100
+                    },
+                    "snippet": "   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 8,
+                        "line": 100
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana mmlk Dela Cruz created — mobile 09886112363.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana mmlk Dela Cruz created — mobile 09886112363.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana mmlk Dela Cruz created — mobile 09886112363.', { exact: true })\u001b[22m\n\n\n   98 |     await expect(page.getByText(\n   99 |       `${name} created — mobile ${mobile}.`, { exact: true }\n> 100 |     )).toBeVisible();\n      |        ^\n  101 |   });\n  102 |\n  103 | test('W6 · AC-3 · reject a whitespace-only name',\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:100:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2026-11-05T13:41:49.023Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-chrome-retry3\\attachments\\screenshot-2d2b15f8fc15952211561d6bfdd0673ccd088358.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 213811\\artifacts\\chrome\\web-trn-01-web-W5-·-AC-3-·-ce25b-s-from-the-creation-message-chrome-retry3\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 8,
+                    "line": 100
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-7544c22784cdea36b61a",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 88,
+          "column": 5
+        },
+        {
+          "title": "W6 · AC-3 · reject a whitespace-only name",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4489,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:41:58.445Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-4f64df3b458679177eca",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 103,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "web\\trn-01.spec.ts",
+      "file": "web/trn-01.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TRN-01 Register a taxpayer (web)",
+          "file": "web/trn-01.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "W5 · AC-4 · refuse the same mobile twice on the screen (\"Ben Dela Cruz\" after \"Ana Dela Cruz\")",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5056,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:42:03.456Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-ddc12277dc90519e69f5",
+              "file": "web/trn-01.spec.ts",
+              "line": 56,
+              "column": 7
+            },
+            {
+              "title": "W6 · AC-5 · refuse the full name \"A\" (1 letter) on the screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3062,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:42:08.531Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-2617e1dc6b10df0bdf16",
+              "file": "web/trn-01.spec.ts",
+              "line": 70,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "web\\trn01_register_taxpayer.spec.ts",
+      "file": "web/trn01_register_taxpayer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TRN-01 Web tests",
+          "file": "web/trn01_register_taxpayer.spec.ts",
+          "line": 27,
+          "column": 6,
+          "specs": [
+            {
+              "title": "W5 · AC-2 · create taxpayer via web form then navigate to My data › My taxpayers",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4264,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:42:11.620Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6dfe539e57b961a2cb9b-34cb545d0ada13d16cce",
+              "file": "web/trn01_register_taxpayer.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "W6 · AC-2 · view My data › My taxpayers when zero taxpayers created",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2110,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:42:15.899Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6dfe539e57b961a2cb9b-c4d753f2fca67f6331bc",
+              "file": "web/trn01_register_taxpayer.spec.ts",
+              "line": 78,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T13:38:55.851Z",
+    "duration": 202369.25999999998,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}
