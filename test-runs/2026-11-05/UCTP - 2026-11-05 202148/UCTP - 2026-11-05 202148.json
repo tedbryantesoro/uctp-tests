@@ -1,0 +1,574 @@
+{
+  "run_id": "20261105-202148",
+  "started_at": "2026-11-05T12:21:48.805Z",
+  "finished_at": "2026-11-05T12:21:54.027Z",
+  "base_url": "https://city-treasurer-staging.aiqe.pro",
+  "browsers": [
+    "chrome",
+    "firefox"
+  ],
+  "story": "UCTP",
+  "counts": {
+    "passed": 0,
+    "flaky": 0,
+    "failed": 0,
+    "blocked": 0,
+    "not_tested": 68
+  },
+  "results": [
+    {
+      "id": "A1",
+      "title": "A1 · AC-1 · create a taxpayer using \"Ana Dela Cruz\" and a new mobile, no email",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A2",
+      "title": "A2 · AC-2 · read back the taxpayer from A1 by its taxpayer_id",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A3",
+      "title": "A3 · AC-2 · find the taxpayer from A1 in my list (created_by = my name-tag)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A4",
+      "title": "A4 · AC-3 · create a taxpayer using \"  Ana Dela Cruz  \" (spaces around): saved as \"Ana Dela Cruz\"",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A5",
+      "title": "A5 · AC-5 · accept the full name \"Al\" (2 letters, the lower limit)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A6",
+      "title": "A6 · AC-5 · accept a full name of 100 letters (the upper limit)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A7",
+      "title": "A7 · AC-5 · accept the full name \"Ñoño O'Brien-Cruz Jr.\" (Ñ and . - ')",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A8",
+      "title": "A8 · AC-6 · accept a blank email \"\" (saved as null)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A9",
+      "title": "A9 · AC-6 · accept the email \"rosa@example.com\"",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A10",
+      "title": "A10 · AC-6 · accept an email of 254 characters (the limit)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A11",
+      "title": "A11 · AC-8 · accept the mobile +639 + 9 digits (saved as 09 + the same 9 digits)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A12",
+      "title": "A12 · AC-5 · refuse the full name \"A\" (1 letter)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A13",
+      "title": "A13 · AC-5 · refuse the full name \"  A  \" (1 letter with spaces around)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A14",
+      "title": "A14 · AC-5 · refuse a full name of 101 letters (one too many)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A15",
+      "title": "A15 · AC-5 · refuse the full name \"Ana 2\" (a digit)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A16",
+      "title": "A16 · AC-5 · refuse the full name \"Ana@Cruz\" (a symbol)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A17",
+      "title": "A17 · AC-5 · refuse a blank full name \"\"",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A18",
+      "title": "A18 · AC-8 · refuse the mobile 0917123456 (10 digits)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A19",
+      "title": "A19 · AC-8 · refuse the mobile 091712345678 (12 digits)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A20",
+      "title": "A20 · AC-8 · refuse the mobile \"0917 123 4567\" (spaces)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A21",
+      "title": "A21 · AC-8 · refuse the mobile 0917-123-4567 (dashes)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A22",
+      "title": "A22 · AC-8 · refuse the mobile 08171234567 (starts with 08)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A23",
+      "title": "A23 · AC-8 · refuse the mobile +638171234567 (starts with +638)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A24",
+      "title": "A24 · AC-6 · refuse the email \"rosa.example.com\" (no @)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A25",
+      "title": "A25 · AC-6 · refuse the email \"rosa@@example.com\" (two @)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A26",
+      "title": "A26 · AC-6 · refuse the email \"rosa@examplecom\" (no dot after @)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A27",
+      "title": "A27 · AC-6 · refuse an email of 255 characters (one too many)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A28",
+      "title": "A28 · AC-4 · refuse a mobile I already registered (409)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A29",
+      "title": "A29 · AC-4 · refuse a mobile I already registered, sent in +639 form (409)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A30",
+      "title": "A30 · AC-5 · save nothing when the full name \"A\" is refused (the same mobile then works)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A31",
+      "title": "A31 · AC-7 · hide my taxpayer from another user (X-User-ID <me>-probe gets 404)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A32",
+      "title": "A32 · AC-7 · leave my taxpayer out of another user's list (X-User-ID <me>-probe)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A33",
+      "title": "A33 · AC-7 · treat my name-tag in other letter case as another user (404)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "A34",
+      "title": "A34 · AC-7 · refuse a request with no X-User-ID header (422)",
+      "browser": "api",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-1, AC-2 · create \"Ana Dela Cruz\" with the API, see it on the screen",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I2",
+      "title": "I2 · AC-1, AC-3 · create \"  Rosa Web  \" on the screen, read \"Rosa Web\" from the API",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for name \"A\"",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for mobile \"0917-123-4567\"",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for email \"rosa@examplecom\"",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I4",
+      "title": "I4 · AC-5, AC-8 · accept on the screen what the API accepts (\"Ñoño O'Brien-Cruz Jr.\", +639 mobile)",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I5",
+      "title": "I5 · AC-4 · refuse on the screen a mobile the API registered",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I6",
+      "title": "I6 · AC-7 · use the same name-tag on the screen and the API (a probe user's taxpayer stays hidden)",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W1",
+      "title": "W1 · AC-1 · open the Create a taxpayer form: all boxes empty, no result box",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W2",
+      "title": "W2 · AC-1 · create a taxpayer on the screen using \"Ana Dela Cruz\" and a new mobile",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W3",
+      "title": "W3 · AC-2 · see the new taxpayer \"Ana Dela Cruz\" in My data",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W4",
+      "title": "W4 · AC-3 · create a taxpayer using \"  Rosa Web  \": shown as \"Rosa Web\"",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W5",
+      "title": "W5 · AC-4 · refuse the same mobile twice on the screen (\"Ben Dela Cruz\" after \"Ana Dela Cruz\")",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W6",
+      "title": "W6 · AC-5 · refuse the full name \"A\" (1 letter) on the screen",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W7",
+      "title": "W7 · AC-6 · refuse the email \"rosa@examplecom\" (no dot after @) on the screen",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W8",
+      "title": "W8 · AC-8 · refuse the mobile 0917-123-4567 (dashes) on the screen",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W9",
+      "title": "W9 · AC-7 · show nothing to another name-tag (\"Probe\") in My data",
+      "browser": "chrome",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I1",
+      "title": "I1 · AC-1, AC-2 · create \"Ana Dela Cruz\" with the API, see it on the screen",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I2",
+      "title": "I2 · AC-1, AC-3 · create \"  Rosa Web  \" on the screen, read \"Rosa Web\" from the API",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for name \"A\"",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for mobile \"0917-123-4567\"",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I3",
+      "title": "I3 · AC-5, AC-6, AC-8 · show the same message on the API and the screen for email \"rosa@examplecom\"",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I4",
+      "title": "I4 · AC-5, AC-8 · accept on the screen what the API accepts (\"Ñoño O'Brien-Cruz Jr.\", +639 mobile)",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I5",
+      "title": "I5 · AC-4 · refuse on the screen a mobile the API registered",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "I6",
+      "title": "I6 · AC-7 · use the same name-tag on the screen and the API (a probe user's taxpayer stays hidden)",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W1",
+      "title": "W1 · AC-1 · open the Create a taxpayer form: all boxes empty, no result box",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W2",
+      "title": "W2 · AC-1 · create a taxpayer on the screen using \"Ana Dela Cruz\" and a new mobile",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W3",
+      "title": "W3 · AC-2 · see the new taxpayer \"Ana Dela Cruz\" in My data",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W4",
+      "title": "W4 · AC-3 · create a taxpayer using \"  Rosa Web  \": shown as \"Rosa Web\"",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W5",
+      "title": "W5 · AC-4 · refuse the same mobile twice on the screen (\"Ben Dela Cruz\" after \"Ana Dela Cruz\")",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W6",
+      "title": "W6 · AC-5 · refuse the full name \"A\" (1 letter) on the screen",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W7",
+      "title": "W7 · AC-6 · refuse the email \"rosa@examplecom\" (no dot after @) on the screen",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W8",
+      "title": "W8 · AC-8 · refuse the mobile 0917-123-4567 (dashes) on the screen",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    },
+    {
+      "id": "W9",
+      "title": "W9 · AC-7 · show nothing to another name-tag (\"Probe\") in My data",
+      "browser": "firefox",
+      "status": "not_tested",
+      "error": "Stopped by you",
+      "screenshot": null
+    }
+  ],
+  "not_tested": [],
+  "report": "UCTP - 2026-11-05 202148.html",
+  "messages": [
+    "Stopped by you"
+  ],
+  "pushed": false,
+  "push_message": "Not pushed: stopped by you.",
+  "folder": "test-runs/2026-11-05/UCTP - 2026-11-05 202148",
+  "pages_url": null,
+  "stopped": true
+}

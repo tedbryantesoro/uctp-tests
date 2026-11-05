@@ -1,0 +1,586 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\ttesoro\\qe360\\uctp-tests\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/web",
+      "tests/integration",
+      "--project=firefox",
+      "--workers=1",
+      "--retries=3",
+      "--pass-with-no-tests",
+      "--grep",
+      "(?:^|\\s)(W1|W4|W3|W2) ·",
+      "--headed"
+    ],
+    "configFile": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\playwright.config.ts",
+    "rootDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 210728/artifacts/firefox",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 210728/artifacts/firefox",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/(web|integration)[\\\\/].*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 210728/artifacts/firefox",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/(web|integration)[\\\\/].*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\raw\\firefox.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "web\\trn-01-web.spec.ts",
+      "file": "web/trn-01-web.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1 · AC-1 · show the exact created message with the submitted full name and mobile",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20820,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana kzsl Dela Cruz created — mobile 09884143867.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana kzsl Dela Cruz created — mobile 09884143867.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana kzsl Dela Cruz created — mobile 09884143867.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana kzsl Dela Cruz created — mobile 09884143867.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana kzsl Dela Cruz created — mobile 09884143867.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana kzsl Dela Cruz created — mobile 09884143867.', { exact: true })\u001b[22m\n\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:46:7",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 7,
+                      "line": 46
+                    },
+                    "snippet": "  44 |     await expect(\n  45 |       page.getByText(`${name} created — mobile ${mobile}.`, { exact: true })\n> 46 |     ).toBeVisible();\n     |       ^\n  47 |   });\n  48 |\n  49 | test('W2 · AC-1 · refuse submission when Full name is empty',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 7,
+                        "line": 46
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana kzsl Dela Cruz created — mobile 09884143867.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana kzsl Dela Cruz created — mobile 09884143867.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana kzsl Dela Cruz created — mobile 09884143867.', { exact: true })\u001b[22m\n\n\n  44 |     await expect(\n  45 |       page.getByText(`${name} created — mobile ${mobile}.`, { exact: true })\n> 46 |     ).toBeVisible();\n     |       ^\n  47 |   });\n  48 |\n  49 | test('W2 · AC-1 · refuse submission when Full name is empty',\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:46:7"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:08:46.983Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\firefox\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-firefox\\attachments\\screenshot-9dcbeadcdb0c8ac889b313687a5610e54823c4aa.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\firefox\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-firefox\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 7,
+                    "line": 46
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 12804,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana trgc Dela Cruz created — mobile 09884158912.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana trgc Dela Cruz created — mobile 09884158912.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana trgc Dela Cruz created — mobile 09884158912.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana trgc Dela Cruz created — mobile 09884158912.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana trgc Dela Cruz created — mobile 09884158912.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana trgc Dela Cruz created — mobile 09884158912.', { exact: true })\u001b[22m\n\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:46:7",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 7,
+                      "line": 46
+                    },
+                    "snippet": "  44 |     await expect(\n  45 |       page.getByText(`${name} created — mobile ${mobile}.`, { exact: true })\n> 46 |     ).toBeVisible();\n     |       ^\n  47 |   });\n  48 |\n  49 | test('W2 · AC-1 · refuse submission when Full name is empty',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 7,
+                        "line": 46
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana trgc Dela Cruz created — mobile 09884158912.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana trgc Dela Cruz created — mobile 09884158912.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana trgc Dela Cruz created — mobile 09884158912.', { exact: true })\u001b[22m\n\n\n  44 |     await expect(\n  45 |       page.getByText(`${name} created — mobile ${mobile}.`, { exact: true })\n> 46 |     ).toBeVisible();\n     |       ^\n  47 |   });\n  48 |\n  49 | test('W2 · AC-1 · refuse submission when Full name is empty',\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:46:7"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-05T13:09:10.501Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\firefox\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-firefox-retry1\\attachments\\screenshot-8ad5e66020714d4b79059a549f03a5ca6f0d9c2b.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\firefox\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-firefox-retry1\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 7,
+                    "line": 46
+                  }
+                },
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30089,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\helpers\\web.ts",
+                        "column": 10,
+                        "line": 52
+                      },
+                      "message": "Error: page.waitForEvent: Test ended.\n=========================== logs ===========================\nwaiting for event \"load\"\n============================================================\n\n   at ..\\helpers\\web.ts:52\n\n  50 |   await dialog.getByRole('textbox').fill(tag);\n  51 |   await Promise.all([                                   // Save reloads the page\n> 52 |     page.waitForEvent('load'),\n     |          ^\n  53 |     dialog.getByRole('button', { name: 'Save' }).click(),\n  54 |   ]);\n  55 |   await expect(page.getByRole('navigation', { name: 'Main' })).toContainText(`You are: ${tag}`);\n    at signIn (C:\\Users\\ttesoro\\qe360\\uctp-tests\\helpers\\web.ts:52:10)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:36:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-11-05T13:09:25.717Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\firefox\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-firefox-retry2\\attachments\\screenshot-7cba3b79983f85e35acd510001269ecc143fc596.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\firefox\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-firefox-retry2\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 12359,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana vudi Dela Cruz created — mobile 09884206187.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana vudi Dela Cruz created — mobile 09884206187.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana vudi Dela Cruz created — mobile 09884206187.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana vudi Dela Cruz created — mobile 09884206187.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana vudi Dela Cruz created — mobile 09884206187.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana vudi Dela Cruz created — mobile 09884206187.', { exact: true })\u001b[22m\n\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:46:7",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 7,
+                      "line": 46
+                    },
+                    "snippet": "  44 |     await expect(\n  45 |       page.getByText(`${name} created — mobile ${mobile}.`, { exact: true })\n> 46 |     ).toBeVisible();\n     |       ^\n  47 |   });\n  48 |\n  49 | test('W2 · AC-1 · refuse submission when Full name is empty',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 7,
+                        "line": 46
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Ana vudi Dela Cruz created — mobile 09884206187.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Ana vudi Dela Cruz created — mobile 09884206187.', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Ana vudi Dela Cruz created — mobile 09884206187.', { exact: true })\u001b[22m\n\n\n  44 |     await expect(\n  45 |       page.getByText(`${name} created — mobile ${mobile}.`, { exact: true })\n> 46 |     ).toBeVisible();\n     |       ^\n  47 |   });\n  48 |\n  49 | test('W2 · AC-1 · refuse submission when Full name is empty',\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:46:7"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2026-11-05T13:09:58.197Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\firefox\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-firefox-retry3\\attachments\\screenshot-3f0c6b0ec08b7c6f7fcd2e4a45f2b16ae813e906.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\firefox\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-firefox-retry3\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 7,
+                    "line": 46
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-54081caeb0cfa82cc403",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 34,
+          "column": 5
+        },
+        {
+          "title": "W2 · AC-1 · refuse submission when Full name is empty",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7711,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:10:12.961Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-746e7c1d3c6468457365",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "W3 · AC-1 · refuse submission when Mobile has an unsupported prefix",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3893,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:10:21.913Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-6f18fe0522501ef1d92f",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 64,
+          "column": 5
+        },
+        {
+          "title": "W4 · AC-1 · refuse submission when Email has no @ separator",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3788,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:10:25.822Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-cad32fe607dda1b31d50",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 79,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "web\\trn-01.spec.ts",
+      "file": "web/trn-01.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TRN-01 Register a taxpayer (web)",
+          "file": "web/trn-01.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "W1 · AC-1 · open the Create a taxpayer form: all boxes empty, no result box",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2792,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:10:29.634Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-39f8387aa6a93f48089d",
+              "file": "web/trn-01.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "W2 · AC-1 · create a taxpayer on the screen using \"Ana Dela Cruz\" and a new mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3339,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:10:32.441Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-9264bd2e20ba74c16e31",
+              "file": "web/trn-01.spec.ts",
+              "line": 25,
+              "column": 7
+            },
+            {
+              "title": "W3 · AC-2 · see the new taxpayer \"Ana Dela Cruz\" in My data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4689,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:10:35.798Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-4ffe9da2c82a7082abbc",
+              "file": "web/trn-01.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "W4 · AC-3 · create a taxpayer using \"  Rosa Web  \": shown as \"Rosa Web\"",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4250,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:10:40.505Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-e4e419d75771ec9b5449",
+              "file": "web/trn-01.spec.ts",
+              "line": 45,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T13:08:46.313Z",
+    "duration": 119408.482,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test run 20261105-210728</title>
+<style>
+:root{--ok:#15803d;--flaky:#b45309;--bad:#b91c1c;--blocked:#d97706;--grey:#6b7280;--line:#e5e7eb}
+body{font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:24px;color:#111827;background:#fff}
+h1{font-size:22px;margin:0 0 4px} .meta{color:var(--grey);margin:0 0 16px}
+.story{white-space:pre-wrap;background:#f9fafb;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 16px}
+.counts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+.count{border:1px solid var(--line);border-radius:8px;padding:8px 14px;min-width:90px}
+.count b{display:block;font-size:24px}
+table{border-collapse:collapse;width:100%} th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f3f4f6} tr.click{cursor:pointer} tr.click:hover{background:#f9fafb}
+tr.detail{display:none} tr.detail.open{display:table-row} tr.detail td{background:#fafafa}
+pre{white-space:pre-wrap;word-break:break-word;margin:0 0 8px;font-size:13px}
+img{max-width:100%;border:1px solid var(--line)}
+.pill{display:inline-block;padding:1px 8px;border-radius:99px;color:#fff;font-size:13px;white-space:nowrap}
+.pill.passed{background:var(--ok)}.pill.flaky{background:var(--flaky)}.pill.failed{background:var(--bad)}
+.pill.blocked{background:var(--blocked)}.pill.not_tested{background:var(--grey)}
+.hint{color:var(--grey);font-size:13px}
+.msg{background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:8px 12px;margin:0 0 12px}
+.print{font:inherit;padding:6px 14px;border:1px solid #1d4ed8;background:#1d4ed8;color:#fff;border-radius:6px;cursor:pointer}
+@media print{tr.detail{display:table-row} .noprint{display:none} body{margin:0} tr{break-inside:avoid} img{max-height:90vh}}
+</style></head><body>
+<h1>Test run 20261105-210728</h1>
+<p class="meta">https://city-treasurer-staging.aiqe.pro · browsers: chrome, firefox · 2026-11-05T13:07:28.668Z to 2026-11-05T13:10:45.747Z</p>
+<p class="meta">On GitHub Pages about a minute after the push: <a href="https://tedbryantesoro.github.io/uctp-tests/2026-11-05/UCTP%20-%202026-11-05%20210728/UCTP%20-%202026-11-05%20210728.html">https://tedbryantesoro.github.io/uctp-tests/2026-11-05/UCTP%20-%202026-11-05%20210728/UCTP%20-%202026-11-05%20210728.html</a></p>
+<div class="story">UCTP</div>
+<div class="counts"><div class="count"><b>11</b>Passed</div><div class="count"><b>0</b>Flaky</div><div class="count"><b>1</b>Failed</div><div class="count"><b>4</b>Blocked</div><div class="count"><b>0</b>Not tested</div></div>
+
+<p class="noprint"><button class="print" type="button" onclick="window.print()">Download PDF</button> <span class="hint">Choose "Save as PDF" in the print window. Click a red or amber row to see why.</span></p>
+<table><thead><tr><th>Id</th><th>AC</th><th>Test</th><th>Browser</th><th>Result</th></tr></thead><tbody>
+<tr class="row blocked click" data-i="0" tabindex="0">
+<td>W1</td><td>AC-1</td><td>show the exact created message with the submitted full name and mobile</td><td>chrome</td><td><span class="pill blocked">Blocked</span></td></tr><tr class="detail" id="d0"><td colspan="5"><pre>Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to &quot;/&quot;, waiting until &quot;load&quot;
+
+
+  17 |
+  18 | async function openCreate(page: any) {
+&gt; 19 |   await page.goto(&#39;/&#39;);</pre><img src="artifacts/chrome/web-trn-01-web-W1-%C2%B7-AC-1-%C2%B7-57eaa-mitted-full-name-and-mobile-chrome-retry3/attachments/screenshot-383c8ed7d45a0953b3b01f842e960ab2e60cf82f.png" alt="Screenshot of W1 in chrome"></td></tr>
+<tr class="row passed" data-i="1">
+<td>W1</td><td>AC-1</td><td>open the Create a taxpayer form: all boxes empty, no result box</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row blocked click" data-i="2" tabindex="0">
+<td>W2</td><td>AC-1</td><td>refuse submission when Full name is empty</td><td>chrome</td><td><span class="pill blocked">Blocked</span></td></tr><tr class="detail" id="d2"><td colspan="5"><pre>Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to &quot;/&quot;, waiting until &quot;load&quot;
+
+
+  17 |
+  18 | async function openCreate(page: any) {
+&gt; 19 |   await page.goto(&#39;/&#39;);</pre><img src="artifacts/chrome/web-trn-01-web-W2-%C2%B7-AC-1-%C2%B7-ca136-ion-when-Full-name-is-empty-chrome-retry3/attachments/screenshot-72530403a7a8415adacf891c7d6a34f238e88e46.png" alt="Screenshot of W2 in chrome"></td></tr>
+<tr class="row passed" data-i="3">
+<td>W2</td><td>AC-1</td><td>create a taxpayer on the screen using &quot;Ana Dela Cruz&quot; and a new mobile</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row blocked click" data-i="4" tabindex="0">
+<td>W3</td><td>AC-1</td><td>refuse submission when Mobile has an unsupported prefix</td><td>chrome</td><td><span class="pill blocked">Blocked</span></td></tr><tr class="detail" id="d4"><td colspan="5"><pre>Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to &quot;/&quot;, waiting until &quot;load&quot;
+
+
+  17 |
+  18 | async function openCreate(page: any) {
+&gt; 19 |   await page.goto(&#39;/&#39;);</pre><img src="artifacts/chrome/web-trn-01-web-W3-%C2%B7-AC-1-%C2%B7-c952f-e-has-an-unsupported-prefix-chrome-retry3/attachments/screenshot-795a77940faf566eb77442aab020c0d7841acedf.png" alt="Screenshot of W3 in chrome"></td></tr>
+<tr class="row passed" data-i="5">
+<td>W3</td><td>AC-2</td><td>see the new taxpayer &quot;Ana Dela Cruz&quot; in My data</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row blocked click" data-i="6" tabindex="0">
+<td>W4</td><td>AC-1</td><td>refuse submission when Email has no @ separator</td><td>chrome</td><td><span class="pill blocked">Blocked</span></td></tr><tr class="detail" id="d6"><td colspan="5"><pre>Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to &quot;/&quot;, waiting until &quot;load&quot;
+
+
+  17 |
+  18 | async function openCreate(page: any) {
+&gt; 19 |   await page.goto(&#39;/&#39;);</pre><img src="artifacts/chrome/web-trn-01-web-W4-%C2%B7-AC-1-%C2%B7-8efe2-when-Email-has-no-separator-chrome-retry3/attachments/screenshot-e5144f21b367e47bdaa13c852428ba98bda84d50.png" alt="Screenshot of W4 in chrome"></td></tr>
+<tr class="row passed" data-i="7">
+<td>W4</td><td>AC-3</td><td>create a taxpayer using &quot;  Rosa Web  &quot;: shown as &quot;Rosa Web&quot;</td><td>chrome</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row failed click" data-i="8" tabindex="0">
+<td>W1</td><td>AC-1</td><td>show the exact created message with the submitted full name and mobile</td><td>firefox</td><td><span class="pill failed">Failed</span></td></tr><tr class="detail" id="d8"><td colspan="5"><pre>Error: expect(locator).toBeVisible() failed
+
+Locator: getByText(&#39;Ana vudi Dela Cruz created — mobile 09884206187.&#39;, { exact: true })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:</pre><img src="artifacts/firefox/web-trn-01-web-W1-%C2%B7-AC-1-%C2%B7-57eaa-mitted-full-name-and-mobile-firefox-retry3/attachments/screenshot-3f0c6b0ec08b7c6f7fcd2e4a45f2b16ae813e906.png" alt="Screenshot of W1 in firefox"></td></tr>
+<tr class="row passed" data-i="9">
+<td>W1</td><td>AC-1</td><td>open the Create a taxpayer form: all boxes empty, no result box</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="10">
+<td>W2</td><td>AC-1</td><td>refuse submission when Full name is empty</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="11">
+<td>W2</td><td>AC-1</td><td>create a taxpayer on the screen using &quot;Ana Dela Cruz&quot; and a new mobile</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="12">
+<td>W3</td><td>AC-1</td><td>refuse submission when Mobile has an unsupported prefix</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="13">
+<td>W3</td><td>AC-2</td><td>see the new taxpayer &quot;Ana Dela Cruz&quot; in My data</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="14">
+<td>W4</td><td>AC-1</td><td>refuse submission when Email has no @ separator</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+<tr class="row passed" data-i="15">
+<td>W4</td><td>AC-3</td><td>create a taxpayer using &quot;  Rosa Web  &quot;: shown as &quot;Rosa Web&quot;</td><td>firefox</td><td><span class="pill passed">Passed</span></td></tr>
+</tbody></table>
+<script>
+document.querySelectorAll('tr.click').forEach(function (tr) {
+  function toggle() { var d = document.getElementById('d' + tr.dataset.i); if (d) d.classList.toggle('open'); }
+  tr.addEventListener('click', toggle);
+  tr.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+});
+</script>
+</body></html>

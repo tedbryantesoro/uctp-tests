@@ -1,0 +1,1131 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\ttesoro\\qe360\\uctp-tests\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/web",
+      "tests/integration",
+      "--project=chrome",
+      "--workers=1",
+      "--retries=3",
+      "--pass-with-no-tests",
+      "--grep",
+      "(?:^|\\s)(W1|W4|W3|W2) ·",
+      "--headed"
+    ],
+    "configFile": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\playwright.config.ts",
+    "rootDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 210728/artifacts/chrome",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 210728/artifacts/chrome",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/(web|integration)[\\\\/].*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ttesoro/qe360/uctp-tests/test-runs/2026-11-05/UCTP - 2026-11-05 210728/artifacts/chrome",
+        "repeatEach": 1,
+        "retries": 3,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/ttesoro/qe360/uctp-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/(web|integration)[\\\\/].*\\.spec\\.(ts|js|mjs)$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\raw\\chrome.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "web\\trn-01-web.spec.ts",
+      "file": "web/trn-01-web.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1 · AC-1 · show the exact created message with the submitted full name and mobile",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7477,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:37:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:37:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:07:34.664Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-chrome\\attachments\\screenshot-6108e2518b54fdc94fcb18389aedb475f1c93c47.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1740,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:37:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:37:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-05T13:07:43.640Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-chrome-retry1\\attachments\\screenshot-ccc9a3429d9668419f8d55d5098621e69a6e7cee.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-chrome-retry1\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1736,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:37:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:37:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-11-05T13:07:46.705Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-chrome-retry2\\attachments\\screenshot-acf93e9871f240c908817115307743b30a26cb0c.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-chrome-retry2\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1738,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:37:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:37:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2026-11-05T13:07:49.685Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-chrome-retry3\\attachments\\screenshot-383c8ed7d45a0953b3b01f842e960ab2e60cf82f.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-chrome-retry3\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-7f48d9e89bd7854c7ad3",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 34,
+          "column": 5
+        },
+        {
+          "title": "W2 · AC-1 · refuse submission when Full name is empty",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1749,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:52:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:52:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:07:52.797Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W2-·-AC-1-·-ca136-ion-when-Full-name-is-empty-chrome\\attachments\\screenshot-4e74511a4d0ec83b757ed571d61cab1183bfec65.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W2-·-AC-1-·-ca136-ion-when-Full-name-is-empty-chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1706,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:52:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:52:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-05T13:07:55.912Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W2-·-AC-1-·-ca136-ion-when-Full-name-is-empty-chrome-retry1\\attachments\\screenshot-2b42e30ad49f34cab8427210240380bd6010efdf.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W2-·-AC-1-·-ca136-ion-when-Full-name-is-empty-chrome-retry1\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1750,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:52:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:52:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-11-05T13:07:58.880Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W2-·-AC-1-·-ca136-ion-when-Full-name-is-empty-chrome-retry2\\attachments\\screenshot-2df60ebc87cc76cc29175be423d1f3429445b00c.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W2-·-AC-1-·-ca136-ion-when-Full-name-is-empty-chrome-retry2\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1698,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:52:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:52:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2026-11-05T13:08:02.091Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W2-·-AC-1-·-ca136-ion-when-Full-name-is-empty-chrome-retry3\\attachments\\screenshot-72530403a7a8415adacf891c7d6a34f238e88e46.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W2-·-AC-1-·-ca136-ion-when-Full-name-is-empty-chrome-retry3\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-794147db2530b9fb495a",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 49,
+          "column": 5
+        },
+        {
+          "title": "W3 · AC-1 · refuse submission when Mobile has an unsupported prefix",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1721,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:67:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:67:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:08:05.144Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W3-·-AC-1-·-c952f-e-has-an-unsupported-prefix-chrome\\attachments\\screenshot-776d92ebba42d0608cd397140cfe6b80de72afb1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W3-·-AC-1-·-c952f-e-has-an-unsupported-prefix-chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1752,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:67:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:67:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-05T13:08:08.281Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W3-·-AC-1-·-c952f-e-has-an-unsupported-prefix-chrome-retry1\\attachments\\screenshot-dc1f2ca5a990bfcbb13dcee48c43695f4092f204.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W3-·-AC-1-·-c952f-e-has-an-unsupported-prefix-chrome-retry1\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1780,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:67:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:67:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-11-05T13:08:11.453Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W3-·-AC-1-·-c952f-e-has-an-unsupported-prefix-chrome-retry2\\attachments\\screenshot-62c3bdc6062a108f876323406cf8fabd379a7199.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W3-·-AC-1-·-c952f-e-has-an-unsupported-prefix-chrome-retry2\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1725,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:67:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:67:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2026-11-05T13:08:14.585Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W3-·-AC-1-·-c952f-e-has-an-unsupported-prefix-chrome-retry3\\attachments\\screenshot-795a77940faf566eb77442aab020c0d7841acedf.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W3-·-AC-1-·-c952f-e-has-an-unsupported-prefix-chrome-retry3\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-da6ad5c8844a98b7cd76",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 64,
+          "column": 5
+        },
+        {
+          "title": "W4 · AC-1 · refuse submission when Email has no @ separator",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1717,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:82:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:82:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-05T13:08:17.725Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W4-·-AC-1-·-8efe2-when-Email-has-no-separator-chrome\\attachments\\screenshot-a300ef0d0b8d074b7ad13024ea533b475291f800.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W4-·-AC-1-·-8efe2-when-Email-has-no-separator-chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1730,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:82:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:82:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-05T13:08:20.848Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W4-·-AC-1-·-8efe2-when-Email-has-no-separator-chrome-retry1\\attachments\\screenshot-c1ebeab24dada7b1b00f5b94971ec71677ee10c5.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W4-·-AC-1-·-8efe2-when-Email-has-no-separator-chrome-retry1\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1744,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:82:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:82:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-11-05T13:08:23.918Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W4-·-AC-1-·-8efe2-when-Email-has-no-separator-chrome-retry2\\attachments\\screenshot-6e62841bf89deeadcd497b6186b4a800e6f0689e.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W4-·-AC-1-·-8efe2-when-Email-has-no-separator-chrome-retry2\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                },
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1733,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:82:11",
+                    "location": {
+                      "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                      "column": 14,
+                      "line": 19
+                    },
+                    "snippet": "  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                        "column": 14,
+                        "line": 19
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/\", waiting until \"load\"\u001b[22m\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');\n     |              ^\n  20 |   await page.getByRole('link', { name: 'Training setup' }).click();\n  21 | }\n  22 |\n    at openCreate (C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:19:14)\n    at C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts:82:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2026-11-05T13:08:27.010Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W4-·-AC-1-·-8efe2-when-Email-has-no-separator-chrome-retry3\\attachments\\screenshot-e5144f21b367e47bdaa13c852428ba98bda84d50.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\test-runs\\2026-11-05\\UCTP - 2026-11-05 210728\\artifacts\\chrome\\web-trn-01-web-W4-·-AC-1-·-8efe2-when-Email-has-no-separator-chrome-retry3\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\ttesoro\\qe360\\uctp-tests\\tests\\web\\trn-01-web.spec.ts",
+                    "column": 14,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7652abe5b4d11446d776-6b239de85241938ed24b",
+          "file": "web/trn-01-web.spec.ts",
+          "line": 79,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "web\\trn-01.spec.ts",
+      "file": "web/trn-01.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TRN-01 Register a taxpayer (web)",
+          "file": "web/trn-01.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "W1 · AC-1 · open the Create a taxpayer form: all boxes empty, no result box",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2273,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:08:30.251Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-7f9b157b1316c3fa57ba",
+              "file": "web/trn-01.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "W2 · AC-1 · create a taxpayer on the screen using \"Ana Dela Cruz\" and a new mobile",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3185,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:08:33.087Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-28e4f81536ae96aae400",
+              "file": "web/trn-01.spec.ts",
+              "line": 25,
+              "column": 7
+            },
+            {
+              "title": "W3 · AC-2 · see the new taxpayer \"Ana Dela Cruz\" in My data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4471,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:08:36.298Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-f7d0799d8dd8a77bdf40",
+              "file": "web/trn-01.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "W4 · AC-3 · create a taxpayer using \"  Rosa Web  \": shown as \"Rosa Web\"",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4472,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-05T13:08:40.781Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "55ceaf0a9589a0d92f22-1b3cfc0adf7f81bc9b05",
+              "file": "web/trn-01.spec.ts",
+              "line": 45,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-05T13:07:33.784Z",
+    "duration": 71688.793,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

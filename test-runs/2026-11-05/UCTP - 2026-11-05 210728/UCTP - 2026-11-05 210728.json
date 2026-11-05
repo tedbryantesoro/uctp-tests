@@ -1,0 +1,161 @@
+{
+  "run_id": "20261105-210728",
+  "started_at": "2026-11-05T13:07:28.668Z",
+  "finished_at": "2026-11-05T13:10:45.747Z",
+  "base_url": "https://city-treasurer-staging.aiqe.pro",
+  "browsers": [
+    "chrome",
+    "firefox"
+  ],
+  "story": "UCTP",
+  "counts": {
+    "passed": 11,
+    "flaky": 0,
+    "failed": 1,
+    "blocked": 4,
+    "not_tested": 0
+  },
+  "results": [
+    {
+      "id": "W1",
+      "title": "W1 · AC-1 · show the exact created message with the submitted full name and mobile",
+      "browser": "chrome",
+      "status": "blocked",
+      "error": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"/\", waiting until \"load\"\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');",
+      "screenshot": "artifacts/chrome/web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-chrome-retry3/attachments/screenshot-383c8ed7d45a0953b3b01f842e960ab2e60cf82f.png"
+    },
+    {
+      "id": "W2",
+      "title": "W2 · AC-1 · refuse submission when Full name is empty",
+      "browser": "chrome",
+      "status": "blocked",
+      "error": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"/\", waiting until \"load\"\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');",
+      "screenshot": "artifacts/chrome/web-trn-01-web-W2-·-AC-1-·-ca136-ion-when-Full-name-is-empty-chrome-retry3/attachments/screenshot-72530403a7a8415adacf891c7d6a34f238e88e46.png"
+    },
+    {
+      "id": "W3",
+      "title": "W3 · AC-1 · refuse submission when Mobile has an unsupported prefix",
+      "browser": "chrome",
+      "status": "blocked",
+      "error": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"/\", waiting until \"load\"\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');",
+      "screenshot": "artifacts/chrome/web-trn-01-web-W3-·-AC-1-·-c952f-e-has-an-unsupported-prefix-chrome-retry3/attachments/screenshot-795a77940faf566eb77442aab020c0d7841acedf.png"
+    },
+    {
+      "id": "W4",
+      "title": "W4 · AC-1 · refuse submission when Email has no @ separator",
+      "browser": "chrome",
+      "status": "blocked",
+      "error": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"/\", waiting until \"load\"\n\n\n  17 |\n  18 | async function openCreate(page: any) {\n> 19 |   await page.goto('/');",
+      "screenshot": "artifacts/chrome/web-trn-01-web-W4-·-AC-1-·-8efe2-when-Email-has-no-separator-chrome-retry3/attachments/screenshot-e5144f21b367e47bdaa13c852428ba98bda84d50.png"
+    },
+    {
+      "id": "W1",
+      "title": "W1 · AC-1 · open the Create a taxpayer form: all boxes empty, no result box",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W2",
+      "title": "W2 · AC-1 · create a taxpayer on the screen using \"Ana Dela Cruz\" and a new mobile",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W3",
+      "title": "W3 · AC-2 · see the new taxpayer \"Ana Dela Cruz\" in My data",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W4",
+      "title": "W4 · AC-3 · create a taxpayer using \"  Rosa Web  \": shown as \"Rosa Web\"",
+      "browser": "chrome",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W1",
+      "title": "W1 · AC-1 · show the exact created message with the submitted full name and mobile",
+      "browser": "firefox",
+      "status": "failed",
+      "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('Ana vudi Dela Cruz created — mobile 09884206187.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:",
+      "screenshot": "artifacts/firefox/web-trn-01-web-W1-·-AC-1-·-57eaa-mitted-full-name-and-mobile-firefox-retry3/attachments/screenshot-3f0c6b0ec08b7c6f7fcd2e4a45f2b16ae813e906.png"
+    },
+    {
+      "id": "W2",
+      "title": "W2 · AC-1 · refuse submission when Full name is empty",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W3",
+      "title": "W3 · AC-1 · refuse submission when Mobile has an unsupported prefix",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W4",
+      "title": "W4 · AC-1 · refuse submission when Email has no @ separator",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W1",
+      "title": "W1 · AC-1 · open the Create a taxpayer form: all boxes empty, no result box",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W2",
+      "title": "W2 · AC-1 · create a taxpayer on the screen using \"Ana Dela Cruz\" and a new mobile",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W3",
+      "title": "W3 · AC-2 · see the new taxpayer \"Ana Dela Cruz\" in My data",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    },
+    {
+      "id": "W4",
+      "title": "W4 · AC-3 · create a taxpayer using \"  Rosa Web  \": shown as \"Rosa Web\"",
+      "browser": "firefox",
+      "status": "passed",
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "not_tested": [],
+  "report": "UCTP - 2026-11-05 210728.html",
+  "messages": [],
+  "pushed": false,
+  "push_message": "",
+  "folder": "test-runs/2026-11-05/UCTP - 2026-11-05 210728",
+  "pages_url": "https://tedbryantesoro.github.io/uctp-tests/2026-11-05/UCTP%20-%202026-11-05%20210728/UCTP%20-%202026-11-05%20210728.html",
+  "only": [
+    "W1",
+    "W4",
+    "W3",
+    "W2"
+  ]
+}

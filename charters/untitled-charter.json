@@ -1,0 +1,850 @@
+{
+ "format": "qe360-mindmap",
+ "version": 1,
+ "title": "",
+ "settings": {
+  "rollupMode": "percentage",
+  "leafOnlyRollup": true,
+  "enableStatusPropagation": true,
+  "statusDefinitions": [
+   {
+    "id": "st_notstarted",
+    "label": "Not Yet Started",
+    "color": "transparent",
+    "countsAsComplete": false,
+    "triggersFailureCascade": false
+   },
+   {
+    "id": "st_inprogress",
+    "label": "In Progress",
+    "color": "#38BDF8",
+    "countsAsComplete": false,
+    "triggersFailureCascade": false
+   },
+   {
+    "id": "st_clarify",
+    "label": "For Clarification",
+    "color": "#EAB308",
+    "countsAsComplete": false,
+    "triggersFailureCascade": false
+   },
+   {
+    "id": "st_blocked",
+    "label": "Blocked",
+    "color": "#EC4899",
+    "countsAsComplete": false,
+    "triggersFailureCascade": true
+   },
+   {
+    "id": "st_failed",
+    "label": "Failed",
+    "color": "#F87171",
+    "countsAsComplete": false,
+    "triggersFailureCascade": true
+   },
+   {
+    "id": "st_passed",
+    "label": "Passed",
+    "color": "#10B981",
+    "countsAsComplete": true,
+    "triggersFailureCascade": false
+   },
+   {
+    "id": "st_flaky",
+    "label": "Flaky",
+    "color": "#F59E0B",
+    "countsAsComplete": false,
+    "triggersFailureCascade": false
+   }
+  ],
+  "severityOrder": [
+   "st_failed",
+   "st_blocked",
+   "st_clarify",
+   "st_inprogress",
+   "st_flaky",
+   "st_passed",
+   "st_notstarted"
+  ]
+ },
+ "root": {
+  "id": "n1",
+  "text": "UCTP",
+  "note": "",
+  "collapsed": false,
+  "statusId": null,
+  "highlight": null,
+  "children": [
+   {
+    "id": "n4",
+    "text": "UCTP — TRN-01 · Register a taxpayer",
+    "note": "",
+    "collapsed": false,
+    "statusId": null,
+    "highlight": null,
+    "children": [
+     {
+      "id": "n5",
+      "text": "The test design will cover all 8 acceptance criteria using your QE skill's 17 heuristics, with API, web, and integration tests as appropriate.",
+      "note": "",
+      "collapsed": false,
+      "statusId": null,
+      "highlight": null,
+      "children": []
+     },
+     {
+      "id": "n6",
+      "text": "Test coverage target: At least 1 positive and 3 negative tests per acceptance criterion, with unique test data and exact expected messages/status codes.",
+      "note": "",
+      "collapsed": false,
+      "statusId": null,
+      "highlight": null,
+      "children": []
+     },
+     {
+      "id": "n7",
+      "text": "Test charter",
+      "note": "",
+      "collapsed": false,
+      "statusId": null,
+      "highlight": null,
+      "children": [
+       {
+        "id": "n8",
+        "text": "SUT: UCTP · No module",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": []
+       },
+       {
+        "id": "n9",
+        "text": "UCTP",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": [
+         {
+          "id": "na",
+          "text": "TRN-01 · Register a taxpayer",
+          "note": "",
+          "collapsed": false,
+          "statusId": null,
+          "highlight": null,
+          "children": [
+           {
+            "id": "nb",
+            "text": "AC-1: Section \"1 — Create a taxpayer\" shows \"[full name] created — mobile [mobile].\"",
+            "note": "",
+            "collapsed": false,
+            "statusId": null,
+            "highlight": null,
+            "children": [
+             {
+              "id": "nc",
+              "text": "Upon page load: Home › Training setup; form with Full name, Mobile (09XXXXXXXXX), Email (optional), Create taxpayer.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nd",
+              "text": "Element validations: Full name, Mobile, Email.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "ne",
+              "text": "Functional validations: Display exact created message after creation.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nf",
+              "text": "Steps: Sign in, open Training setup, enter details, create taxpayer.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "ng",
+              "text": "W1 · Function + : Create \"Ana abcd Dela Cruz\" with unique mobile -> exact message \"Ana abcd Dela Cruz created — mobile [mobile].\"",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nh",
+              "text": "W2 · General - : Submit empty full name -> exact name validation message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "ni",
+              "text": "W3 · Domain/Data - : Submit mobile with unsupported prefix -> exact PH mobile validation message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nj",
+              "text": "W4 · Syntax - : Submit email without @ -> \"invalid email format\".",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             }
+            ]
+           },
+           {
+            "id": "nk",
+            "text": "AC-2: The same taxpayer details show under My data › My taxpayers.",
+            "note": "",
+            "collapsed": false,
+            "statusId": null,
+            "highlight": null,
+            "children": [
+             {
+              "id": "nl",
+              "text": "Upon page load: My data › My taxpayers.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nm",
+              "text": "Functional validations: Created taxpayer details appear in the list.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nn",
+              "text": "Steps: Create taxpayer, navigate to My data, open My taxpayers.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "no",
+              "text": "I1 · Store + : Create taxpayer with name, mobile and email -> all three details appear in My taxpayers.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "np",
+              "text": "I2 · General - : ASK: What exact UI behavior/message should appear if the taxpayer name is missing from My taxpayers?",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nq",
+              "text": "I3 · Store - : ASK: What exact UI behavior/message should appear if the taxpayer mobile is missing from My taxpayers?",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nr",
+              "text": "I4 · Preferences - : ASK: Should optional email appear in My taxpayers, and how is omitted email represented?",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             }
+            ]
+           },
+           {
+            "id": "ns",
+            "text": "AC-3: Spaces around the name are removed in both the created message and My data.",
+            "note": "",
+            "collapsed": false,
+            "statusId": null,
+            "highlight": null,
+            "children": [
+             {
+              "id": "nt",
+              "text": "Functional validations: Trim leading and trailing spaces.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nu",
+              "text": "Steps: Enter name with surrounding spaces, create taxpayer, inspect message and My data.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nv",
+              "text": "W5 · General + : Submit \"   Ana abcd Dela Cruz   \" -> created message contains \"Ana abcd Dela Cruz\" without surrounding spaces.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nw",
+              "text": "W6 · General - : Submit whitespace-only name -> exact name validation message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "nx",
+              "text": "W7 · Numbers - : Submit one character surrounded by spaces -> exact name validation message after trimming.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "ny",
+              "text": "W8 · Syntax - : Submit trimmed name containing @ -> exact name validation message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             }
+            ]
+           },
+           {
+            "id": "nz",
+            "text": "AC-4: A mobile that's already registered is not accepted.",
+            "note": "",
+            "collapsed": false,
+            "statusId": null,
+            "highlight": null,
+            "children": [
+             {
+              "id": "n10",
+              "text": "Functional validations: Duplicate mobile rejected for the tenant.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n11",
+              "text": "Steps: Create taxpayer, submit another taxpayer with the same mobile.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n12",
+              "text": "A1 · Store + : Submit an already registered mobile -> HTTP 409, {\"detail\":{\"mobile\":\"already registered for this tenant\"}}.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n13",
+              "text": "A2 · User - : ASK: Should duplicate mobile be rejected across different tenants?",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n14",
+              "text": "A3 · User - : ASK: Should duplicate mobile be rejected across different user IDs in the same tenant?",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n15",
+              "text": "A4 · Domain/Data - : ASK: Are 09 and +639 representations of the same mobile treated as duplicates?",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             }
+            ]
+           },
+           {
+            "id": "n16",
+            "text": "AC-5: Name accepts only 2–100 characters: letters, spaces, . - ' and Ñ.",
+            "note": "",
+            "collapsed": false,
+            "statusId": null,
+            "highlight": null,
+            "children": [
+             {
+              "id": "n17",
+              "text": "Element validations: Full name, minimum 2, maximum 100 characters, allowed characters.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n18",
+              "text": "Functional validations: HTTP 201 for accepted names; HTTP 422 for refused names.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n19",
+              "text": "A5 · Numbers + : Submit names of 2 and 100 characters -> HTTP 201 with taxpayer_id.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1a",
+              "text": "A6 · Numbers - : Submit one-character name -> HTTP 422, exact full_name message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1b",
+              "text": "A7 · Numbers - : Submit 101-character name -> HTTP 422, exact full_name message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1c",
+              "text": "A8 · Syntax - : Submit name containing @ -> HTTP 422, exact full_name message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             }
+            ]
+           },
+           {
+            "id": "n1d",
+            "text": "AC-6: Email is optional. If typed, it needs one @ with a dot after it, 254 characters max.",
+            "note": "",
+            "collapsed": false,
+            "statusId": null,
+            "highlight": null,
+            "children": [
+             {
+              "id": "n1e",
+              "text": "Element validations: Email optional, maximum 254 characters.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1f",
+              "text": "Functional validations: Omitted email accepted; supplied email checked.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1g",
+              "text": "A9 · General + : Omit email and submit a formatted email -> HTTP 201 with taxpayer_id for both.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1h",
+              "text": "A10 · Syntax - : Submit email without @ -> HTTP 422, {\"detail\":{\"email\":\"invalid email format\"}}.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1i",
+              "text": "A11 · Syntax - : Submit email without a dot after @ -> HTTP 422, exact email message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1j",
+              "text": "A12 · Numbers - : Submit email longer than 254 characters -> HTTP 422, exact email message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             }
+            ]
+           },
+           {
+            "id": "n1k",
+            "text": "AC-7: A taxpayer created under my name-tag shows only for that name-tag.",
+            "note": "",
+            "collapsed": false,
+            "statusId": null,
+            "highlight": null,
+            "children": [
+             {
+              "id": "n1l",
+              "text": "Functional validations: Data isolation between name-tags.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1m",
+              "text": "Steps: Create under ted-1234, switch to ted-1234-other, inspect My data and taxpayer list.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1n",
+              "text": "I5 · User + : Create under ted-1234, switch to ted-1234-other -> original taxpayer absent; show \"None yet — create one in Training setup.\"",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1o",
+              "text": "I6 · User - : Check other name-tag for original taxpayer name -> zero matches.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1p",
+              "text": "I7 · Navigation - : Open My taxpayers under other name-tag -> exact empty-state message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1q",
+              "text": "I8 · Store - : Open other name-tag taxpayer list -> no taxpayer entries.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             }
+            ]
+           },
+           {
+            "id": "n1r",
+            "text": "AC-8: Mobile accepts only 09 + 9 digits, or +639 + 9 digits. No spaces, no dashes.",
+            "note": "",
+            "collapsed": false,
+            "statusId": null,
+            "highlight": null,
+            "children": [
+             {
+              "id": "n1s",
+              "text": "Element validations: Mobile (09XXXXXXXXX).",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1t",
+              "text": "Functional validations: HTTP 201 for accepted formats; HTTP 422 for rejected formats.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1u",
+              "text": "A13 · Syntax + : Submit 09XXXXXXXXX and +639XXXXXXXXX -> HTTP 201 with taxpayer_id.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1v",
+              "text": "A14 · Syntax - : Submit mobile with unsupported prefix -> HTTP 422, exact mobile message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1w",
+              "text": "A15 · Numbers - : Submit mobile with too few digits -> HTTP 422, exact mobile message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             },
+             {
+              "id": "n1x",
+              "text": "A16 · General - : Submit mobile containing spaces or dashes -> HTTP 422, exact mobile message.",
+              "note": "",
+              "collapsed": false,
+              "statusId": null,
+              "highlight": null,
+              "children": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "id": "n1y",
+        "text": "Coverage AC-1: 1 positive, 3 negative",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": []
+       },
+       {
+        "id": "n1z",
+        "text": "Coverage AC-2: 1 positive, 3 negative",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": []
+       },
+       {
+        "id": "n20",
+        "text": "Coverage AC-3: 1 positive, 3 negative",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": []
+       },
+       {
+        "id": "n21",
+        "text": "Coverage AC-4: 1 positive, 3 negative",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": []
+       },
+       {
+        "id": "n22",
+        "text": "Coverage AC-5: 1 positive, 3 negative",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": []
+       },
+       {
+        "id": "n23",
+        "text": "Coverage AC-6: 1 positive, 3 negative",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": []
+       },
+       {
+        "id": "n24",
+        "text": "Coverage AC-7: 1 positive, 3 negative",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": []
+       },
+       {
+        "id": "n25",
+        "text": "Coverage AC-8: 1 positive, 3 negative",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": []
+       }
+      ]
+     },
+     {
+      "id": "n26",
+      "text": "Playwright test files",
+      "note": "",
+      "collapsed": false,
+      "statusId": null,
+      "highlight": null,
+      "children": [
+       {
+        "id": "n27",
+        "text": "API — tests/api/trn-01-api.spec.ts",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": []
+       },
+       {
+        "id": "n28",
+        "text": "Web — tests/web/trn-01-web.spec.ts",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": []
+       },
+       {
+        "id": "n29",
+        "text": "Integration — tests/integration/trn-01-integration.spec.ts",
+        "note": "",
+        "collapsed": false,
+        "statusId": null,
+        "highlight": null,
+        "children": [
+         {
+          "id": "n2a",
+          "text": "AC-2 – Email: Display email in My taxpayers when provided.",
+          "note": "",
+          "collapsed": false,
+          "statusId": null,
+          "highlight": null,
+          "children": []
+         },
+         {
+          "id": "n2b",
+          "text": "AC-2 – Optional email: When omitted, do not display an email value.",
+          "note": "",
+          "collapsed": false,
+          "statusId": null,
+          "highlight": null,
+          "children": []
+         },
+         {
+          "id": "n2c",
+          "text": "AC-4 – Duplicate mobile: Duplicate registration is rejected.",
+          "note": "",
+          "collapsed": false,
+          "statusId": null,
+          "highlight": null,
+          "children": []
+         },
+         {
+          "id": "n2d",
+          "text": "The corresponding tests use test.fixme() rather than inventing expected behavior.",
+          "note": "",
+          "collapsed": false,
+          "statusId": null,
+          "highlight": null,
+          "children": []
+         },
+         {
+          "id": "n2e",
+          "text": "Execution boundary: Tests are prepared, not executed. Review the charter in Charter360 and press RUN. The configured staging target is https://city-treasurer-staging.aiqe.pro.",
+          "note": "",
+          "collapsed": false,
+          "statusId": null,
+          "highlight": null,
+          "children": []
+         },
+         {
+          "id": "n2f",
+          "text": "The three test files have also been saved under tests/api/, tests/web/, and tests/integration/.",
+          "note": "",
+          "collapsed": false,
+          "statusId": null,
+          "highlight": null,
+          "children": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

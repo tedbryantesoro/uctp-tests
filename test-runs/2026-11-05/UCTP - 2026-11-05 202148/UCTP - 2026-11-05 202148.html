@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test run 20261105-202148</title>
+<style>
+:root{--ok:#15803d;--flaky:#b45309;--bad:#b91c1c;--blocked:#d97706;--grey:#6b7280;--line:#e5e7eb}
+body{font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:24px;color:#111827;background:#fff}
+h1{font-size:22px;margin:0 0 4px} .meta{color:var(--grey);margin:0 0 16px}
+.story{white-space:pre-wrap;background:#f9fafb;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 16px}
+.counts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+.count{border:1px solid var(--line);border-radius:8px;padding:8px 14px;min-width:90px}
+.count b{display:block;font-size:24px}
+table{border-collapse:collapse;width:100%} th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f3f4f6} tr.click{cursor:pointer} tr.click:hover{background:#f9fafb}
+tr.detail{display:none} tr.detail.open{display:table-row} tr.detail td{background:#fafafa}
+pre{white-space:pre-wrap;word-break:break-word;margin:0 0 8px;font-size:13px}
+img{max-width:100%;border:1px solid var(--line)}
+.pill{display:inline-block;padding:1px 8px;border-radius:99px;color:#fff;font-size:13px;white-space:nowrap}
+.pill.passed{background:var(--ok)}.pill.flaky{background:var(--flaky)}.pill.failed{background:var(--bad)}
+.pill.blocked{background:var(--blocked)}.pill.not_tested{background:var(--grey)}
+.hint{color:var(--grey);font-size:13px}
+.msg{background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:8px 12px;margin:0 0 12px}
+.print{font:inherit;padding:6px 14px;border:1px solid #1d4ed8;background:#1d4ed8;color:#fff;border-radius:6px;cursor:pointer}
+@media print{tr.detail{display:table-row} .noprint{display:none} body{margin:0} tr{break-inside:avoid} img{max-height:90vh}}
+</style></head><body>
+<h1>Test run 20261105-202148</h1>
+<p class="meta">https://city-treasurer-staging.aiqe.pro · browsers: chrome, firefox · 2026-11-05T12:21:48.805Z to 2026-11-05T12:21:54.027Z</p>
+
+<div class="story">UCTP</div>
+<div class="counts"><div class="count"><b>0</b>Passed</div><div class="count"><b>0</b>Flaky</div><div class="count"><b>0</b>Failed</div><div class="count"><b>0</b>Blocked</div><div class="count"><b>68</b>Not tested</div></div>
+<p class="msg">Stopped by you</p>
+<p class="noprint"><button class="print" type="button" onclick="window.print()">Download PDF</button> <span class="hint">Choose "Save as PDF" in the print window. Click a red or amber row to see why.</span></p>
+<table><thead><tr><th>Id</th><th>AC</th><th>Test</th><th>Browser</th><th>Result</th></tr></thead><tbody>
+<tr class="row not_tested click" data-i="0" tabindex="0">
+<td>A1</td><td>AC-1</td><td>create a taxpayer using &quot;Ana Dela Cruz&quot; and a new mobile, no email</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d0"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="1" tabindex="0">
+<td>A2</td><td>AC-2</td><td>read back the taxpayer from A1 by its taxpayer_id</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d1"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="2" tabindex="0">
+<td>A3</td><td>AC-2</td><td>find the taxpayer from A1 in my list (created_by = my name-tag)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d2"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="3" tabindex="0">
+<td>A4</td><td>AC-3</td><td>create a taxpayer using &quot;  Ana Dela Cruz  &quot; (spaces around): saved as &quot;Ana Dela Cruz&quot;</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d3"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="4" tabindex="0">
+<td>A5</td><td>AC-5</td><td>accept the full name &quot;Al&quot; (2 letters, the lower limit)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d4"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="5" tabindex="0">
+<td>A6</td><td>AC-5</td><td>accept a full name of 100 letters (the upper limit)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d5"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="6" tabindex="0">
+<td>A7</td><td>AC-5</td><td>accept the full name &quot;Ñoño O&#39;Brien-Cruz Jr.&quot; (Ñ and . - &#39;)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d6"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="7" tabindex="0">
+<td>A8</td><td>AC-6</td><td>accept a blank email &quot;&quot; (saved as null)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d7"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="8" tabindex="0">
+<td>A9</td><td>AC-6</td><td>accept the email &quot;rosa@example.com&quot;</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d8"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="9" tabindex="0">
+<td>A10</td><td>AC-6</td><td>accept an email of 254 characters (the limit)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d9"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="10" tabindex="0">
+<td>A11</td><td>AC-8</td><td>accept the mobile +639 + 9 digits (saved as 09 + the same 9 digits)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d10"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="11" tabindex="0">
+<td>A12</td><td>AC-5</td><td>refuse the full name &quot;A&quot; (1 letter)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d11"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="12" tabindex="0">
+<td>A13</td><td>AC-5</td><td>refuse the full name &quot;  A  &quot; (1 letter with spaces around)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d12"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="13" tabindex="0">
+<td>A14</td><td>AC-5</td><td>refuse a full name of 101 letters (one too many)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d13"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="14" tabindex="0">
+<td>A15</td><td>AC-5</td><td>refuse the full name &quot;Ana 2&quot; (a digit)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d14"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="15" tabindex="0">
+<td>A16</td><td>AC-5</td><td>refuse the full name &quot;Ana@Cruz&quot; (a symbol)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d15"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="16" tabindex="0">
+<td>A17</td><td>AC-5</td><td>refuse a blank full name &quot;&quot;</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d16"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="17" tabindex="0">
+<td>A18</td><td>AC-8</td><td>refuse the mobile 0917123456 (10 digits)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d17"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="18" tabindex="0">
+<td>A19</td><td>AC-8</td><td>refuse the mobile 091712345678 (12 digits)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d18"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="19" tabindex="0">
+<td>A20</td><td>AC-8</td><td>refuse the mobile &quot;0917 123 4567&quot; (spaces)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d19"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="20" tabindex="0">
+<td>A21</td><td>AC-8</td><td>refuse the mobile 0917-123-4567 (dashes)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d20"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="21" tabindex="0">
+<td>A22</td><td>AC-8</td><td>refuse the mobile 08171234567 (starts with 08)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d21"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="22" tabindex="0">
+<td>A23</td><td>AC-8</td><td>refuse the mobile +638171234567 (starts with +638)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d22"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="23" tabindex="0">
+<td>A24</td><td>AC-6</td><td>refuse the email &quot;rosa.example.com&quot; (no @)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d23"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="24" tabindex="0">
+<td>A25</td><td>AC-6</td><td>refuse the email &quot;rosa@@example.com&quot; (two @)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d24"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="25" tabindex="0">
+<td>A26</td><td>AC-6</td><td>refuse the email &quot;rosa@examplecom&quot; (no dot after @)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d25"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="26" tabindex="0">
+<td>A27</td><td>AC-6</td><td>refuse an email of 255 characters (one too many)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d26"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="27" tabindex="0">
+<td>A28</td><td>AC-4</td><td>refuse a mobile I already registered (409)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d27"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="28" tabindex="0">
+<td>A29</td><td>AC-4</td><td>refuse a mobile I already registered, sent in +639 form (409)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d28"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="29" tabindex="0">
+<td>A30</td><td>AC-5</td><td>save nothing when the full name &quot;A&quot; is refused (the same mobile then works)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d29"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="30" tabindex="0">
+<td>A31</td><td>AC-7</td><td>hide my taxpayer from another user (X-User-ID &lt;me&gt;-probe gets 404)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d30"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="31" tabindex="0">
+<td>A32</td><td>AC-7</td><td>leave my taxpayer out of another user&#39;s list (X-User-ID &lt;me&gt;-probe)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d31"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="32" tabindex="0">
+<td>A33</td><td>AC-7</td><td>treat my name-tag in other letter case as another user (404)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d32"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="33" tabindex="0">
+<td>A34</td><td>AC-7</td><td>refuse a request with no X-User-ID header (422)</td><td>api</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d33"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="34" tabindex="0">
+<td>W1</td><td>AC-1</td><td>open the Create a taxpayer form: all boxes empty, no result box</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d34"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="35" tabindex="0">
+<td>W2</td><td>AC-1</td><td>create a taxpayer on the screen using &quot;Ana Dela Cruz&quot; and a new mobile</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d35"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="36" tabindex="0">
+<td>W3</td><td>AC-2</td><td>see the new taxpayer &quot;Ana Dela Cruz&quot; in My data</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d36"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="37" tabindex="0">
+<td>W4</td><td>AC-3</td><td>create a taxpayer using &quot;  Rosa Web  &quot;: shown as &quot;Rosa Web&quot;</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d37"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="38" tabindex="0">
+<td>W5</td><td>AC-4</td><td>refuse the same mobile twice on the screen (&quot;Ben Dela Cruz&quot; after &quot;Ana Dela Cruz&quot;)</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d38"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="39" tabindex="0">
+<td>W6</td><td>AC-5</td><td>refuse the full name &quot;A&quot; (1 letter) on the screen</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d39"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="40" tabindex="0">
+<td>W7</td><td>AC-6</td><td>refuse the email &quot;rosa@examplecom&quot; (no dot after @) on the screen</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d40"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="41" tabindex="0">
+<td>W8</td><td>AC-8</td><td>refuse the mobile 0917-123-4567 (dashes) on the screen</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d41"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="42" tabindex="0">
+<td>W9</td><td>AC-7</td><td>show nothing to another name-tag (&quot;Probe&quot;) in My data</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d42"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="43" tabindex="0">
+<td>I1</td><td>AC-1, AC-2</td><td>create &quot;Ana Dela Cruz&quot; with the API, see it on the screen</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d43"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="44" tabindex="0">
+<td>I2</td><td>AC-1, AC-3</td><td>create &quot;  Rosa Web  &quot; on the screen, read &quot;Rosa Web&quot; from the API</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d44"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="45" tabindex="0">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for name &quot;A&quot;</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d45"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="46" tabindex="0">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for mobile &quot;0917-123-4567&quot;</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d46"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="47" tabindex="0">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for email &quot;rosa@examplecom&quot;</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d47"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="48" tabindex="0">
+<td>I4</td><td>AC-5, AC-8</td><td>accept on the screen what the API accepts (&quot;Ñoño O&#39;Brien-Cruz Jr.&quot;, +639 mobile)</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d48"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="49" tabindex="0">
+<td>I5</td><td>AC-4</td><td>refuse on the screen a mobile the API registered</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d49"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="50" tabindex="0">
+<td>I6</td><td>AC-7</td><td>use the same name-tag on the screen and the API (a probe user&#39;s taxpayer stays hidden)</td><td>chrome</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d50"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="51" tabindex="0">
+<td>W1</td><td>AC-1</td><td>open the Create a taxpayer form: all boxes empty, no result box</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d51"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="52" tabindex="0">
+<td>W2</td><td>AC-1</td><td>create a taxpayer on the screen using &quot;Ana Dela Cruz&quot; and a new mobile</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d52"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="53" tabindex="0">
+<td>W3</td><td>AC-2</td><td>see the new taxpayer &quot;Ana Dela Cruz&quot; in My data</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d53"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="54" tabindex="0">
+<td>W4</td><td>AC-3</td><td>create a taxpayer using &quot;  Rosa Web  &quot;: shown as &quot;Rosa Web&quot;</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d54"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="55" tabindex="0">
+<td>W5</td><td>AC-4</td><td>refuse the same mobile twice on the screen (&quot;Ben Dela Cruz&quot; after &quot;Ana Dela Cruz&quot;)</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d55"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="56" tabindex="0">
+<td>W6</td><td>AC-5</td><td>refuse the full name &quot;A&quot; (1 letter) on the screen</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d56"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="57" tabindex="0">
+<td>W7</td><td>AC-6</td><td>refuse the email &quot;rosa@examplecom&quot; (no dot after @) on the screen</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d57"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="58" tabindex="0">
+<td>W8</td><td>AC-8</td><td>refuse the mobile 0917-123-4567 (dashes) on the screen</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d58"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="59" tabindex="0">
+<td>W9</td><td>AC-7</td><td>show nothing to another name-tag (&quot;Probe&quot;) in My data</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d59"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="60" tabindex="0">
+<td>I1</td><td>AC-1, AC-2</td><td>create &quot;Ana Dela Cruz&quot; with the API, see it on the screen</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d60"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="61" tabindex="0">
+<td>I2</td><td>AC-1, AC-3</td><td>create &quot;  Rosa Web  &quot; on the screen, read &quot;Rosa Web&quot; from the API</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d61"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="62" tabindex="0">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for name &quot;A&quot;</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d62"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="63" tabindex="0">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for mobile &quot;0917-123-4567&quot;</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d63"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="64" tabindex="0">
+<td>I3</td><td>AC-5, AC-6, AC-8</td><td>show the same message on the API and the screen for email &quot;rosa@examplecom&quot;</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d64"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="65" tabindex="0">
+<td>I4</td><td>AC-5, AC-8</td><td>accept on the screen what the API accepts (&quot;Ñoño O&#39;Brien-Cruz Jr.&quot;, +639 mobile)</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d65"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="66" tabindex="0">
+<td>I5</td><td>AC-4</td><td>refuse on the screen a mobile the API registered</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d66"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+<tr class="row not_tested click" data-i="67" tabindex="0">
+<td>I6</td><td>AC-7</td><td>use the same name-tag on the screen and the API (a probe user&#39;s taxpayer stays hidden)</td><td>firefox</td><td><span class="pill not_tested">Not tested</span></td></tr><tr class="detail" id="d67"><td colspan="5"><pre>Stopped by you</pre></td></tr>
+</tbody></table>
+<script>
+document.querySelectorAll('tr.click').forEach(function (tr) {
+  function toggle() { var d = document.getElementById('d' + tr.dataset.i); if (d) d.classList.toggle('open'); }
+  tr.addEventListener('click', toggle);
+  tr.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+});
+</script>
+</body></html>
